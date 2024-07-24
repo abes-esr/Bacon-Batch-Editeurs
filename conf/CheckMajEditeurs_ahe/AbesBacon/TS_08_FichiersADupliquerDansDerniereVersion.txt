@@ -1,0 +1,4 @@
+Cairn_Global_Revues-EcoSocPol	Cairn_Couperin_EcoSocPol
+Cairn_Global_Revues-General	Cairn_Couperin_General
+Cairn_Global_Revues-Humanites	Cairn_Couperin_Humanites
+Cairn_Global_Revues-Psychologie	Cairn_Couperin_Psychologie

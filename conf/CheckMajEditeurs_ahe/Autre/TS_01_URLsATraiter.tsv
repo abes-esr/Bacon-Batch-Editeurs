@@ -1,0 +1,77 @@
+ACM:Export ACM books	ACM_GLOBAL_ALLEBOOKS	https://dl.acm.org/feeds/acm_kbart_books.txt	acm_kbart_books
+ACM:Export ACM periodicals/proceedings	ACM_COUPERIN_DIGITAL-LIBRARY	https://dl.acm.org/pb-assets/feeds/acm_kbart_periodicals_proceedings.txt	acm_kbart_periodicals_proceedings
+ACS:ACS All Publications Package	ACS_COUPERIN_ALLJOURNALS	https://solutions.acs.org/wp-content/uploads/2021/09/All-Publications-Collection-updated-monthly.txt	All-Publications-Collection-updated-monthly
+ACS:ACS eBooks Complete Collection	ACS_GLOBAL_ALLEBOOKS	https://solutions.acs.org/wp-content/uploads/2021/09/eBooks-Complete-Collection-updated-monthly-1.txt	ACS_eBooks_Complete_Collection
+APS:Physical Review journal KBART file	APS_GLOBAL_ALLJOURNALS	https://harvest.aps.org/holdings/kbart.tsv	APS_AllTitles_2024_05_17
+JSTOR:Arts & Sciences I	JSTOR_COUPERIN_ARTS-AND-SCIENCES-I	https://www.jstor.org/kbart/collections/as	JSTOR_Global_Arts&SciencesICollection_2023-02-17
+JSTOR:Arts & Sciences II	JSTOR_COUPERIN_ARTS-AND-SCIENCES-II	https://www.jstor.org/kbart/collections/asii	JSTOR_Global_Arts&SciencesIICollection_2023-02-17
+JSTOR:Arts & Sciences III	JSTOR_COUPERIN_ARTS-AND-SCIENCES-III	https://www.jstor.org/kbart/collections/asiii	JSTOR_Global_Arts&SciencesIIICollection_2023-02-17
+JSTOR:Arts & Sciences III	JSTOR_COUPERIN_ARTS-AND-SCIENCES-III	https://www.jstor.org/kbart/collections/asiii	JSTOR_Global_Arts&SciencesIIICollection_2023-02-17
+JSTOR:Arts & Sciences IV	JSTOR_COUPERIN_ARTS-AND-SCIENCES-IV	https://www.jstor.org/kbart/collections/asiv	JSTOR_Global_Arts&SciencesIVCollection_2023-02-17
+JSTOR:Arts & Sciences IX	JSTOR_COUPERIN_ARTS-AND-SCIENCES-IX	https://www.jstor.org/kbart/collections/asix	JSTOR_Global_Arts&SciencesIXCollection_2023-02-17
+JSTOR:Arts & Sciences V	JSTOR_COUPERIN_ARTS-AND-SCIENCES-V	https://www.jstor.org/kbart/collections/asv	JSTOR_Global_Arts&SciencesVCollection_2023-02-17
+JSTOR:Arts & Sciences VI	JSTOR_COUPERIN_ARTS-AND-SCIENCES-VI	https://www.jstor.org/kbart/collections/asvi	JSTOR_Global_Arts&SciencesVICollection_2023-02-17
+JSTOR:Arts & Sciences VII	JSTOR_COUPERIN_ARTS-AND-SCIENCES-VII	https://www.jstor.org/kbart/collections/asvii	JSTOR_Global_Arts&SciencesVIICollection_2023-02-17
+JSTOR:Arts & Sciences VIII	JSTOR_COUPERIN_ARTS-AND-SCIENCES-VIII	https://www.jstor.org/kbart/collections/asviii	JSTOR_Global_Arts&SciencesVIIICollection_2023-02-17
+JSTOR:Arts & Sciences X	JSTOR_COUPERIN_ARTS-AND-SCIENCES-X	https://www.jstor.org/kbart/collections/asx	JSTOR_Global_Arts&SciencesXCollection_2023-02-17
+JSTOR:Arts & Sciences XI	JSTOR_COUPERIN_ARTS-AND-SCIENCES-XI	https://www.jstor.org/kbart/collections/asxi	JSTOR_Global_Arts&SciencesXICollection_2023-02-17
+JSTOR:Arts & Sciences XII	JSTOR_COUPERIN_ARTS-AND-SCIENCES-XII	https://www.jstor.org/kbart/collections/asxii	JSTOR_Global_Arts&SciencesXIICollection_2023-02-17
+JSTOR:Arts & Sciences XIII	JSTOR_COUPERIN_ARTS-AND-SCIENCES-XIII	https://www.jstor.org/kbart/collections/asxiii	JSTOR_Global_Arts&SciencesXIIICollection_2023-02-17
+JSTOR:Arts & Sciences XIV	JSTOR_COUPERIN_ARTS-AND-SCIENCES-XIV	https://www.jstor.org/kbart/collections/asxiv	JSTOR_Global_Arts&SciencesXIVCollection_2023-02-17
+JSTOR:Arts & Sciences XV	JSTOR_COUPERIN_ARTS-AND-SCIENCES-XV	https://www.jstor.org/kbart/collections/asxv-backfile-collection	JSTOR_Global_Arts&SciencesXVCollection_2023-02-17
+JSTOR:Asia	JSTOR_COUPERIN_ASIA	https://www.jstor.org/kbart/collections/asia-backfile-collection	JSTOR_Global_AsiaCollection_2023-02-17
+BRILL:All Brill, Schöningh, Fink and mentis Titles	BRILL_GLOBAL_ALLEBOOKS	https://brill.com/fileasset/downloads_static/ebookkbart/Brill_Global_eBooks.txt	Brill_Global_eBooks
+JSTOR:Biological Sciences	JSTOR_COUPERIN_BIOLOGICAL-SCIENCES	https://www.jstor.org/kbart/collections/biosci	JSTOR_Global_BiologicalSciencesCollection_2023-02-17
+JSTOR:Business & Economics	JSTOR_COUPERIN_BUSINESS-AND-ECONOMICS	https://www.jstor.org/kbart/collections/businesseconomics	JSTOR_Global_Business&EconomicsCollection_2023-02-17
+JSTOR:Business I	JSTOR_COUPERIN_BUSINESS-I	https://www.jstor.org/kbart/collections/bus	JSTOR_Global_BusinessICollection_2023-02-17
+JSTOR:Business II	JSTOR_COUPERIN_BUSINESS-II	https://www.jstor.org/kbart/collections/busii	JSTOR_Global_BusinessIICollection_2023-02-17
+JSTOR:Business III	JSTOR_COUPERIN_BUSINESS-III	https://www.jstor.org/kbart/collections/busiii	JSTOR_Global_BusinessIIICollection_2023-02-17
+JSTOR:Business IV	JSTOR_COUPERIN_BUSINESS-IV	https://www.jstor.org/kbart/collections/busiv	JSTOR_Global_BusinessIVCollection_2023-02-17
+CUP:CCO	CUP_GLOBAL_CCO	https://www.cambridge.org/core/services/aop-cambridge-core/kbart/create/bespoke/0FA3FCA4468F7A8E15F0414727CCE50F	CUP_Cambridge_Companions_Online
+CUP:CHO	CUP_GLOBAL_CHO	https://www.cambridge.org/core/services/aop-cambridge-core/kbart/create/bespoke/E4BD8AB89BF46D463F219E9EEED3A62E	CUP_Cambridge_Histories_Online
+CUP:Cambridge eBooks All Books	CUP_GLOBAL_ALLEBOOKS	https://www.cambridge.org/core/services/aop-cambridge-core/kbart/create/bespoke/8C5D6D9B701663C0B1B8F2556DE6AC2E	CUP_Cambridge_eBooks_All_Books
+CUP:Cambridge Journals 2024 Full Collection	CUP_COUPERIN_ALLJOURNALS	https://www.cambridge.org/core/services/aop-file-manager/file/652702a7080b4a3a61221ab2	Cambridge-Journals-2024-Full-Collection
+CUP:Cambridge-Journals-All-Gold-Open-Access-Journals	CUP_GLOBAL_OA-JOURNALS	https://www.cambridge.org/core/services/aop-file-manager/file/64553a61ac56ca63eba2589b/2024-Cambridge-Journals-All-Gold-Open-Access-Journals.txt	2024-Cambridge-Journals-All-Gold-Open-Access-Journals
+ELSEVIER:BMF	ELSEVIER_COUPERIN_BIBLIOTHEQUE-MEDICALE-FRANCAISE	https://holdings.sciencedirect.com/holdings/productReport.url?packageId=38190&productId=34	ScienceDirectStandard_Global_ElsevierMassonFrenchLanguageTitles
+ELSEVIER:CFC	ELSEVIER_COUPERIN_COMPLETE-FREEDOM-COLLECTION	http://holdings.sciencedirect.com/holdings/productReport.url?packageId=18048&productId=34	ScienceDirectStandard_Global_CompleteFreedomCollection
+ELSEVIER:CP	ELSEVIER_COUPERIN_CELLPRESS	https://holdings.sciencedirect.com/holdings/productReport.url?packageId=7426&productId=34	ScienceDirectStandard_Global_CellPressCollection
+ELSEVIER:ScienceDirect All Titles	ELSEVIER_GLOBAL_SCIENCEDIRECT-ALLTITLES	https://holdings.sciencedirect.com/holdings/productReport.url?packageId=&productId=34&downloadId=1717426460245	ScienceDirectStandard_Global_AllTitles
+EMS:Books KBART	EMS_GLOBAL_ALLEBOOKS	https://ems.press/files/standalone/metadata/books/kbart/EMSPress_Global_AllBooks.txt	EMSPress_Global_AllBooks
+EMS:Journals KBART	EMS_GLOBAL_ALLJOURNALS	https://ems.press/files/standalone/metadata/journals/kbart/EMSPress_Global_AllJournals.txt	EMSPress_Global_AllJournals
+ENI:Eni KBART	ENI_GLOBAL_ALLTITLES	http://download.mediapluspro.com/BN/FR/current/Kbart/kbart.csv	kbart
+JSTOR:Ecology & Botany I	JSTOR_COUPERIN_ECOLOGY-AND-BOTANY-I	https://www.jstor.org/kbart/collections/eb	JSTOR_Global_Ecology&BotanyICollection_2023-02-17
+JSTOR:Essential	JSTOR_COUPERIN_ESSENTIAL	https://www.jstor.org/kbart/collections/jstoressential	JSTOR_Global_JSTOREssentialCollection_2023-02-21
+HARMATTAN:L'Harmattan Harmathèque Allebooks	HARMATTAN_GLOBAL_HARMATHEQUE-ALLEBOOKS	https://www.editions-harmattan.fr/_uploads/harmatheque_Global_AllEbooks_kbart.txt	harmatheque_Global_AllEbooks_kbart
+JSTOR:Health & General Sciences	JSTOR_COUPERIN_HEALTH-AND-GENERAL-SCIENCES	https://www.jstor.org/kbart/collections/gs	JSTOR_Global_Health&GeneralSciencesCollection_2023-02-17
+JSTOR:Hebrew Journals	JSTOR_COUPERIN_HEBREW	https://www.jstor.org/kbart/collections/hebrewjournals	JSTOR_Global_HebrewJournalsCollection_2023-02-17
+IOP:Download All records (txt)	IOP_GLOBAL_ALLEBOOKS	https://cms.iopscience.org/2c221352-0a1a-11eb-8f02-fd3098ce0def/ioppublishing_all_collections_combined_releases_all_records.txt?guest=true	ioppublishing_all_collections_combined_releases_all_records
+JSTOR:Iberoamerica	JSTOR_COUPERIN_IBEROAMERICA	https://www.jstor.org/kbart/collections/jstoriberoamerica	JSTOR_Global_IberoamericaCollection_2023-02-17
+JSTOR:Ireland	JSTOR_COUPERIN_IRELAND	https://www.jstor.org/kbart/collections/ireland	JSTOR_Global_IrelandCollection_2023-02-27
+JSTOR:JSTOR Security Studies (journal titles only- not a separate collection)	JSTOR_COUPERIN_SECURITY-STUDIES-JOURNALS-ONLY	https://www.jstor.org/kbart/collections/securitystudies-backfile-collection?contentType=journals	JSTOR_Global_SecurityStudies_Journals_2023-02-27
+JSTOR:JSTOR Security Studies (journals and research reports)	JSTOR_COUPERIN_SECURITY-STUDIES	https://www.jstor.org/kbart/collections/securitystudies-backfile-collection	JSTOR_Global_SecurityStudies_2023-02-27
+JSTOR:JSTOR Security Studies (research report titles only - not a separate collection)	JSTOR_COUPERIN_SECURITY-STUDIES-RESEARCH-REPORTS-ONLY	https://www.jstor.org/kbart/collections/securitystudies-backfile-collection?contentType=research_reports	JSTOR_Global_SecurityStudies_ResearchReports_2023-02-27
+JSTOR:JSTOR Sustainability (journals and research reports)	JSTOR_COUPERIN_SUSTAINABILITY	https://www.jstor.org/kbart/collections/sustainability-backfile-collection	JSTOR_Global_Sustainability_2023-02-27
+JSTOR:JSTOR Sustainability (journals titles only - not a separate collection)	JSTOR_COUPERIN_SUSTAINABILITY-JOURNALS-ONLY	https://www.jstor.org/kbart/collections/sustainability-backfile-collection?contentType=journals	JSTOR_Global_SustainabilityCollection_Journals_2023-02-27
+JSTOR:JSTOR Sustainability (research report titles only - not a separate collection)	JSTOR_COUPERIN_SUSTAINABILITY-RESEARCH-REPORTS-ONLY	https://www.jstor.org/kbart/collections/sustainability-backfile-collection?contentType=research_reports	JSTOR_Global_SustainabilityCollection_ResearchReports_2023-02-27
+JSTOR:Books at JSTOR: All Books Title List	JSTOR_GLOBAL_ALLEBOOKS	https://www.jstor.org/kbart/collections/all-book-titles	JSTOR_Global_AllBookTitles_2022-08-29
+JSTOR:Open Access Journals Title List	JSTOR_GLOBAL_OA-JOURNALS	https://www.jstor.org/kbart/collections/oa-journal-titles	JSTOR_Global_OpenAccessJournalTitles_2022-08-29
+JSTOR:Jewish Studies	JSTOR_COUPERIN_JEWISH-STUDIES	https://www.jstor.org/kbart/collections/jewishstudies-backfile-collection	JSTOR_Global_JewishStudies_2023-02-17
+APS:KBART File	APS_COUPERIN_ALLJOURNALS	https://harvest.aps.org/holdings/kbart.tsv	APS_AllTitles_2023_04_24
+JSTOR:Language & Literature	JSTOR_COUPERIN_LANGUAGE-AND-LITERATURE	https://www.jstor.org/kbart/collections/langlit	JSTOR_Global_Language&LiteratureCollection_2023-02-21
+JSTOR:Life Sciences	JSTOR_COUPERIN_LIFE-SCIENCES	https://www.jstor.org/kbart/collections/lifesci	JSTOR_Global_LifeSciencesCollection_2023-02-21
+JSTOR:Lives of Literature Collection	JSTOR_COUPERIN_LIVES-OF-LITERATURE	https://www.jstor.org/kbart/collections/livesoflit-backfile-collection	JSTOR_Global_LivesofLiterature_2023-02-27
+MATHDOC:Mathdoc Global Mersenne	MATHDOC_GLOBAL_MERSENNE	https://alco.centre-mersenne.org/kbart/export/	Mathdoc_Global_Mersenne
+MATHDOC:Mathdoc Global Numdam	MATHDOC_GLOBAL_NUMDAM	http://www.numdam.org/kbart/export	Mathdoc_Global_Numdam
+JSTOR:Mathematics & Statistics	JSTOR_COUPERIN_MATHEMATICS-AND-STATISTICS	https://www.jstor.org/kbart/collections/mathstat	JSTOR_Global_Mathematics&StatisticsCollection_2023-02-21
+JSTOR:Mathematics & Statistics Legacy	JSTOR_COUPERIN_MATHEMATICS-AND-STATISTICS-LEGACY	https://www.jstor.org/kbart/collections/mathstat-legacy-backfile-collection	JSTOR_Global_Mathematics&StatisticsLegacyCollection_2023-02-21
+JSTOR:Museums Collection	JSTOR_COUPERIN_MUSEUMS	https://www.jstor.org/kbart/collections/mus-backfile-collection	JSTOR_Global_MuseumsCollection_2023-02-27
+JSTOR:Music	JSTOR_COUPERIN_MUSIC	https://www.jstor.org/kbart/collections/music-backfile-collection	JSTOR_Global_MusicCollection_2023-02-21
+JSTOR:Music Legacy	JSTOR_COUPERIN_MUSIC-LEGACY	https://www.jstor.org/kbart/collections/music-legacy-backfile-collection	JSTOR_Global_MusicLegacyCollection_2023-02-21
+OBP:Open Book Publishers catalogue	OBP_GLOBAL_ALLEBOOKS	http://export.thoth.pub/specifications/kbart::oclc/publisher/85fd969a-a16c-480b-b641-cb9adf979c3b	kbart__oclc__85fd969a-a16c-480b-b641-cb9adf979c3b
+PROJECTMUSE:Project Muse Open Access Books	PROJECTMUSE_GLOBAL_OA-EBOOKS	https://about.muse.jhu.edu/lib/metadata?format=kbart&content=book&include=oa&filename=open_access_books&no_auth=1	open_access_books
+PROJECTMUSE:Project Muse Open Access Journals	PROJECTMUSE_GLOBAL_OA-JOURNALS	https://about.muse.jhu.edu/lib/metadata?format=kbart&content=journal&include=oa&filename=open_access_journals&no_auth=1	open_access_journals
+PROJECTMUSE:Universal books	PROJECTMUSE_GLOBAL_ALLEBOOKS	https://about.muse.jhu.edu/lib/metadata?no_auth=1&format=kbart&content=book&collection_ids=1886	project_muse_kbart-ebooks
+PROJECTMUSE:Universal journals	PROJECTMUSE_GLOBAL_ALLJOURNALS	https://about.muse.jhu.edu/lib/metadata?no_auth=1&format=kbart&content=journal&collection_ids=1887	project_muse_kbart-journals
+JSTOR:Religion & Theology	JSTOR_COUPERIN_RELIGION-AND-THEOLOGY	https://www.jstor.org/kbart/collections/relitheo	JSTOR_Global_Religion&TheologyCollection_2023-02-20
+THIEME:Book List - Text File	THIEME_GLOBAL_ALLEBOOKS	https://www.thieme-connect.com/products/ebooks/kbart/thiemeconnectcomebooks_AllTitles.txt	thiemeconnectcomebooks_AllTitles
+THIEME:Journals Listing - Text File	THIEME_GLOBAL_ALLJOURNALS	https://www.thieme-connect.com/products/ejournals/kbart/thiemeconnectcomejournals_AllTitles.txt	thiemeconnectcomejournals_AllTitles

@@ -1,0 +1,7 @@
+# Corrections de qqs noms de fichiers : [ProviderName]_[Region/Consortium]_[PackageName]_[YYYY-MM-DD].txt
+# Avant	Après
+OpenAcess	OpenAccess
+PERSEE_Global_AllTitles	Persee_Global_AllJournals
+Book_Coverage_KBART	OpenEdition_Global_AllEbooks
+Journal_Coverage_KBART	OpenEdition_Global_AllJournals
+TechniquesIngenieur	TI
