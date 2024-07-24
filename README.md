@@ -12,8 +12,10 @@ That's the job of the CheckMajEditeur.sh script.
 ### some details
 Each script execution is traced into a rundir directory according to the following directory tree.
 
-The schema is <script_name>/<publisher>/<running date>/<process step>.
+The schema is  : 
 ```
+<script_name>/<publisher>/<running date>/<process step>.
+
 ├── CheckMajEditeurs_ahe
 │   ├── AbesBacon
 │   │   └── 2024-07-23_21:45:01
