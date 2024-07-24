@@ -13,7 +13,7 @@ That's the job of the CheckMajEditeur.sh script.
 Each script execution is traced into a rundir directory according to the following directory tree.
 
 The schema is <script_name>/<publisher>/<running date>/<process step>.
-
+```
 ├── CheckMajEditeurs_ahe
 │   ├── AbesBacon
 │   │   └── 2024-07-23_21:45:01
@@ -32,7 +32,7 @@ The schema is <script_name>/<publisher>/<running date>/<process step>.
 └── Traite_OwnCloud_ahe
     └── AbesBacon
         └── 2024-07-23_21:35:01
-
+```
 Files are copied as many time as needed ; this is done for tracking or debugging purpose.
 
 Log files are under <running date> directory : 99_log, 99_Mail, 99_Mail_Warning .
