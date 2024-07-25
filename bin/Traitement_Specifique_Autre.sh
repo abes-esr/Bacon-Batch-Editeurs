@@ -145,6 +145,7 @@ function TS_03_ErreurDansLaRecuperationDuFichierKBART
 	# Vérification que le fichier d'erreur de CURL ne contienne pas une indication d'erreur.
 	# Il faut récupérer le dernier code http car en cas de redirect il est d'abord égal à 302
 	HTTPLine=$( grep "< HTTP/1.1 " $V03_FichierKBART_stderr | tail -n 1 )
+	HTTPLine=${HTTPLine/$'\x0D'}
 	HTTPCode=${HTTPLine#< HTTP/1.1 };HTTPCode=${HTTPCode%% *}
 	[[ $HTTPCode -ne 200 ]] && i=1
 
@@ -158,8 +159,8 @@ function TS_03_ErreurDansLaRecuperationDuFichierKBART
 	if [[ $i -ne 0 ]]
 	 then
 		fLogMail
-		fLogMail "🎌 ATTENTION : le fichier $lURL n'a pas pu être chargé."
-		fLogMail "🎌 ATTENTION : des erreurs ont été détectées."
+		fLogMail "🌵 ATTENTION : le fichier $lURL n'a pas pu être chargé."
+		fLogMail "🌵 ATTENTION : des erreurs ont été détectées."
 		fLogMailVarf "HTTPLine"
 		fLogMailVarf "HTTPCode"
 		fLogMail
@@ -175,7 +176,7 @@ function TS_03_ErreurDansLaRecuperationDuFichierKBART
 	if [[ $i -ne 0 ]]
 	 then
 		fLogMailWarning
-	  fLogMailWarning "🎌 ATTENTION : demande de redirection de l'url de : "
+	  fLogMailWarning "👁 ATTENTION : demande de redirection de l'url de : "
 	  fLogMailWarning $( grep  -B 10 "HTTP/1.1 301" $V03_FichierKBART_stderr | grep "> GET " $V03_FichierKBART_stderr | head -n 1 | sed -e "s/\x0D/\x0A/g" )
 	  fLogMailWarning " vers :"
     fLogMailWarning $( grep "< Location:" $V03_FichierKBART_stderr )
@@ -184,7 +185,7 @@ function TS_03_ErreurDansLaRecuperationDuFichierKBART
 	if [[ $i -ne 0 ]]
 	 then
 		fLogMailWarning
-	  fLogMailWarning "🎌 ATTENTION : demande de redirection de l'url de : "
+	  fLogMailWarning "👁 ATTENTION : demande de redirection de l'url de : "
 
 	  fLogMailWarning $( grep  -B 10 "HTTP/1.1 302" $V03_FichierKBART_stderr | grep "> GET " $V03_FichierKBART_stderr | head -n 1 | sed -e "s/\x0D/\x0A/g" )
 	  fLogMailWarning " vers :"
