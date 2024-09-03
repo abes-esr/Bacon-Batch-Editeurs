@@ -32,7 +32,7 @@ function TC_MailConf
 	# Sujet du mail de rapport
   #
   ObjetDuMessage="[BACON] $EDITEUR, $YYYYmmdd_HHMMSS"
-  AdministrateurAppli="michaux@abes.fr,hillaire@abes.fr"
+  AdministrateurAppli="michaux@abes.fr,hillaire@abes.fr,gully@abes.fr"
 }
 
 function TC_BOM_HEADER_SEPARATOR
@@ -60,7 +60,6 @@ function TC_BOM_HEADER_SEPARATOR
   TC_BHS_Header=${TC_BHS_Header/$'\x0D'}
   LANG="$LANG_ORIG"
 
-
   # KBFH_FindHeaderPatternApprox retourne :
   # ( numéro du pattern trouvé ou zéro sinon )*10
   # + 0 (Pattern inclus dans header )
@@ -75,6 +74,13 @@ function TC_BOM_HEADER_SEPARATOR
     TC_BHS_Header=${TC_BHS_Header//\"/}
 	  #fEchoVarf "TC_BHS_Header"
 	  TC_BHS_Separator=${TC_BHS_Header/publication_title/}
+	  # before going further we look after if publication_title is present in the header
+	  if [[ ${#TC_BHS_Separator} -eq ${#TC_BHS_Header} ]]
+	    then
+	      fEchoVarf "TC_BHS_Header"
+	      fEchof "The file header don't even have publication_title as field !!!"
+	      return 255;
+	  fi
 	  #fEchoVarf "TC_BHS_Separator"
 	  TC_BHS_Separator=${TC_BHS_Separator:0:1}
 	  fEchoVarf "TC_BHS_Separator"
@@ -156,6 +162,13 @@ function TC_03_Conformite_KBART
 	fEchof "Recherche de l'encodage et du format du fichier kbart à traiter."
 	TC_BOM_HEADER_SEPARATOR "$V03_FichierKBART"
   local rcTC_BHS=$?
+  if [[ ${rcTC_BHS} -eq 255 ]]
+   then
+    fLogMail "URL du fichier : "$url
+    fLogMail "La ligne d'entête du fichier ne contient même pas publication_title comme indicateur de colonne !!!"
+    fLogMail "$( head -n 250 $V03_FichierKBART )"
+    return 255
+  fi
 	if [[ $TC_BHS_Separator != $'\t' ]]
 	 then
 		fLogMail "Le séparateur ${TC_BHS_Separator} est différent de la tabulation: Pattern = ${Versions[$rcTC_BHS]} ."

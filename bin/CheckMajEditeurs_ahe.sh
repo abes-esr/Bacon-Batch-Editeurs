@@ -252,6 +252,13 @@ for (( cl=0;cl<$cLines;cl++ ))
 		continue
 	fi
   TC_03_Conformite_KBART "$URL"
+  if [[ $? -eq 255 ]]
+	 then
+	  fEcho
+		fEcho "Abandon du traitement"
+		fEcho
+		continue
+	fi
   #
 	###############################################################
 	# Traitement du nom du fichier ( on renomme les fichiers au standard Bacon )

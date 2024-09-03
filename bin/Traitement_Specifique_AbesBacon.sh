@@ -188,10 +188,6 @@ function TS_03_ErreurDansLaRecuperationDuFichierKBART
   return 0
 }
 
-# Opération commune à tous les éditeurs
-# TC_03_Conformite_KBART
-
-
 ###############################################################
 #
 # TS_04_NormalisationDuNomDuFichierAuStandardBacon : Les fichiers récupérés par le traitement précédent sont renommés au standard BACON ( <BOUQUET>_<DATE>.tsv )
