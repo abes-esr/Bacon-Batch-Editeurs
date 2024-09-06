@@ -1,5 +1,6 @@
 Archive/
 DerniereVersion/
 rundir/
-git.sh
+01_git*.sh
+02_git*.sh
 git.md
