@@ -50,7 +50,7 @@ function TS_MailConf
 	TS_EchoFunction
 	#ListeMail=$AdministrateurAppli",thomas@abes.fr,bleesz@abes.fr,parra@abes.fr,michaux@abes.fr,pouilloux@abes.fr,gully@abes.fr"
 	#ListeMail=$AdministrateurAppli",hillaire@abes.fr"
-	ListeMail=$AdministrateurAppli",bleesz@abes.fr,parra@abes.fr"
+	ListeMail=$AdministrateurAppli",bleesz@abes.fr,parra@abes.fr,riquelme@abes.fr"
 	#ListeMail="hillaire@abes.fr"
 }
 
