@@ -32,7 +32,24 @@ function TC_MailConf
 	# Sujet du mail de rapport
   #
   ObjetDuMessage="[BACON] $EDITEUR, $YYYYmmdd_HHMMSS"
-  AdministrateurAppli="michaux@abes.fr,hillaire@abes.fr,gully@abes.fr"
+  Administrateurs=""
+  Fonctionnels=""
+  local Ligne=""
+  local Variable=""
+  while read Ligne
+	 do
+	   llb=${#Ligne};Ligne=${Ligne##* \#};lla=${#Ligne}
+	   [[ $lla -lt $llb ]] && continue # si ok c'est que la ligne est un commentaire
+	   Value=${Ligne##*=}
+	   [[ ${#Value} -eq 0 ]] && continue
+
+	   Variable=${Ligne%%=*}
+	   case $Variable in
+	     "Administrateurs") Administrateurs=${Value};;
+	     "Fonctionnels") Fonctionnels=${Value};;
+	     *) echo "Variable inconnue : seuls sont autorisés Administrateurs et Fonctionnels .";;
+	   esac
+   done < $BASECONF_SCRIPT/TC_Mail.conf
 }
 
 function TC_BOM_HEADER_SEPARATOR
@@ -627,7 +644,7 @@ function TC_14_VerificationGeneraleDesErreurs
 function TC_15_EnvoiMailRecapitulatif
 {
   TC_EchoFunction
-
+  local ListeMail=$Administrateurs","$Fonctionnels
   fLogMail ""
   fLogMail "########### Fin du traitement le " $(date +'%d-%m-%Y a %H:%M:%S') "###########"
   fEchoVar "LANG"

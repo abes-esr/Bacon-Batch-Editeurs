@@ -4,3 +4,6 @@ rundir/
 01_git*.sh
 02_git*.sh
 git.md
+.Rhistory
+TS_Mail.conf
+TC_Mail.conf

@@ -82,9 +82,6 @@ SCRIPT=$( basename $BASH_SOURCE );SCRIPT=${SCRIPT%.sh}
 
 ENV_AfficheVariables
 
-TC_MailConf
-TS_MailConf
-
 ###############################################################
 # Initialisation des variables
 #
@@ -431,6 +428,8 @@ TC_13_ErreurTraitement
 #TC_14_VerificationGeneraleDesErreurs
 ###############################################################
 
+TC_MailConf
+TS_MailConf
 TC_15_EnvoiMailRecapitulatif
 
 #

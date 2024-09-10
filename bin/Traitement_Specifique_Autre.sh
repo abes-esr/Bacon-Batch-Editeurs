@@ -48,10 +48,31 @@ function TS_EchoFunction
 function TS_MailConf
 {
 	TS_EchoFunction
-	#ListeMail=$AdministrateurAppli",thomas@abes.fr,bleesz@abes.fr,parra@abes.fr,michaux@abes.fr,pouilloux@abes.fr,gully@abes.fr"
-	#ListeMail=$AdministrateurAppli",hillaire@abes.fr"
-	ListeMail=$AdministrateurAppli",bleesz@abes.fr,parra@abes.fr,riquelme@abes.fr"
-	#ListeMail="hillaire@abes.fr"
+	local Variable=""
+	local Value=""
+	local Separator=""
+
+	while read Ligne
+	 do
+	   llb=${#Ligne};Ligne=${Ligne##* \#};lla=${#Ligne}
+	   [[ $lla -lt $llb ]] && continue # si ok c'est que la ligne est un commentaire
+	   Value=${Ligne##*=}
+	   [[ ${#Value} -eq 0 ]] && continue
+
+	   Variable=${Ligne%%=*}
+	   Separator=""
+	   case $Variable in
+	     "Administrateurs")
+	       [[ ${#Administrateurs} -gt 0 ]] && Separator=","
+	       Administrateurs=${Administrateurs}${Separator}${Value}
+	       ;;
+	     "Fonctionnels")
+	       [[ ${#Fonctionnels} -gt 0 ]] && Separator=","
+	       Fonctionnels=${Fonctionnels}${Separator}${Value}
+	       ;;
+	     *) echo "Variable inconnue : seuls sont autorisés Administrateurs et Fonctionnels .";;
+	   esac
+   done < $BASECONF_SCRIPT_EDITEUR/TS_Mail.conf
 }
 
 ###############################################################
