@@ -1,7 +1,7 @@
 ACM:Export ACM books	ACM_GLOBAL_ALLEBOOKS	https://dl.acm.org/feeds/acm_kbart_books.txt	acm_kbart_books
 ACM:Export ACM periodicals/proceedings	ACM_COUPERIN_DIGITAL-LIBRARY	https://dl.acm.org/pb-assets/feeds/acm_kbart_periodicals_proceedings.txt	acm_kbart_periodicals_proceedings
 ACS:ACS All Publications Package	ACS_COUPERIN_ALLJOURNALS	https://solutions.acs.org/wp-content/uploads/2021/09/All-Publications-Collection-updated-monthly.txt	All-Publications-Collection-updated-monthly
-ACS:ACS eBooks Complete Collection	ACS_GLOBAL_ALLEBOOKS	https://solutions.acs.org/wp-content/uploads/2021/09/eBooks-Complete-Collection-updated-monthly-1.txt	ACS_eBooks_Complete_Collection
+ACS:ACS eBooks Complete Collection	ACS_GLOBAL_ALLEBOOKS	https://solutions.acs.org/wp-content/uploads/eBooks-Complete-Collection-updated-monthly.txt	ACS_eBooks_Complete_Collection
 APS:Physical Review journal KBART file	APS_GLOBAL_ALLJOURNALS	https://harvest.aps.org/holdings/kbart.tsv	APS_AllTitles_2024_05_17
 JSTOR:Arts & Sciences I	JSTOR_COUPERIN_ARTS-AND-SCIENCES-I	https://www.jstor.org/kbart/collections/as	JSTOR_Global_Arts&SciencesICollection_2023-02-17
 JSTOR:Arts & Sciences II	JSTOR_COUPERIN_ARTS-AND-SCIENCES-II	https://www.jstor.org/kbart/collections/asii	JSTOR_Global_Arts&SciencesIICollection_2023-02-17

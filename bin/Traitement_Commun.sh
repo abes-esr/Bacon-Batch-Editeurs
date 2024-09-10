@@ -651,7 +651,7 @@ function TC_15_EnvoiMailRecapitulatif
   fEcho "cat $FicMail $FicMailWarning $StdErrFile \\"
   fEcho "  | sed -e \"s/\x0D/\x0A/g\" \\"
   fEcho "  | mail -s \"$ObjetDuMessage\" \"$ListeMail\""
-  cat $FicMail $FicMailWarning $StdErrFile | sed -e "s/\x0D/\x0A/g" | mail -s "$ObjetDuMessage" "$ListeMail"
+  cat $FicMail $FicMailWarning_URL $FicMailWarning $StdErrFile | sed -e "s/\x0D/\x0A/g" | mail -s "$ObjetDuMessage" "$ListeMail"
 }
 
 ###############################################################

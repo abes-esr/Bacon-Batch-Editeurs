@@ -126,8 +126,10 @@ LogFile=$RUNDIR"/99_log"                # Nom du fichier de Log
 > $LogFile
 FicMail=$RUNDIR"/99_Mail"                # Nom du fichier pour l'envoi du mail de rapport
 > $FicMail
-FicMailWarning=$RUNDIR"/99_Mail_Warning" # Nom du fichier des warning pour l'envoi du mail de rapport
+FicMailWarning=$RUNDIR"/99_Mail_Warning" # Nom du fichier des warnings pour l'envoi du mail de rapport
 > $FicMailWarning
+FicMailWarning_URL=$RUNDIR"/99_Mail_Warning_URL" # Nom du fichier des warnings URL pour l'envoi du mail de rapport
+> $FicMailWarning_URL
 # l'include de echos.sh est fait ici car ses fonctions ont besoin de $LogFile, $FicMail et $FicMailWarning
 . $RACINE/bin/echos.sh
 

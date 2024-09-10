@@ -193,24 +193,27 @@ function TS_03_ErreurDansLaRecuperationDuFichierKBART
 	fEchof
 	fEchof "Analyse des entêtes de la réponse pour détecter d'éventuels redirects."
 	fEchof
+
 	i=$(grep  "HTTP/1.1 301" $V03_FichierKBART_stderr | wc -l)
 	if [[ $i -ne 0 ]]
 	 then
-		fLogMailWarning
-	  fLogMailWarning "👁 ATTENTION : demande de redirection de l'url de : "
-	  fLogMailWarning $( grep  -B 10 "HTTP/1.1 301" $V03_FichierKBART_stderr | grep "> GET " $V03_FichierKBART_stderr | head -n 1 | sed -e "s/\x0D/\x0A/g" )
-	  fLogMailWarning " vers :"
-    fLogMailWarning $( grep "< Location:" $V03_FichierKBART_stderr )
+		fLogMailWarning_URL
+		fLogMailWarning_URL " -> $lURL"
+	  fLogMailWarning_URL "👁 ATTENTION : demande de redirection de l'url de : "
+	  fLogMailWarning_URL $( grep  -B 10 "HTTP/1.1 301" $V03_FichierKBART_stderr | grep "> GET " $V03_FichierKBART_stderr | head -n 1 | sed -e "s/\x0D/\x0A/g" )
+	  fLogMailWarning_URL " vers :"
+    fLogMailWarning_URL $( grep "< Location:" $V03_FichierKBART_stderr )
 	fi
 	i=$(grep  "HTTP/1.1 302" $V03_FichierKBART_stderr | wc -l)
 	if [[ $i -ne 0 ]]
 	 then
-		fLogMailWarning
-	  fLogMailWarning "👁 ATTENTION : demande de redirection de l'url de : "
+		fLogMailWarning_URL
+		fLogMailWarning_URL " -> $lURL"
+	  fLogMailWarning_URL "👁 ATTENTION : demande de redirection de l'url de : "
 
-	  fLogMailWarning $( grep  -B 10 "HTTP/1.1 302" $V03_FichierKBART_stderr | grep "> GET " $V03_FichierKBART_stderr | head -n 1 | sed -e "s/\x0D/\x0A/g" )
-	  fLogMailWarning " vers :"
-    fLogMailWarning $( grep "< Location:" $V03_FichierKBART_stderr )
+	  fLogMailWarning_URL $( grep  -B 10 "HTTP/1.1 302" $V03_FichierKBART_stderr | grep "> GET " $V03_FichierKBART_stderr | head -n 1 | sed -e "s/\x0D/\x0A/g" )
+	  fLogMailWarning_URL " vers :"
+    fLogMailWarning_URL $( grep "< Location:" $V03_FichierKBART_stderr )
 	fi
 	return 0
 }

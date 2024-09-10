@@ -3,9 +3,10 @@
 #
 # echo "nb de var="${#*}", "$#
 
-[[ -z $LogFile        ]] && { echo "Variable LogFile non définie => sortie du script.";exit 1; }
-[[ -z $FicMail        ]] && { echo "Variable FicMail non définie => sortie du script.";exit 1; }
-[[ -z $FicMailWarning ]] && { echo "Variable FicMailWarning non définie => sortie du script.";exit 1; }
+[[ -z $LogFile            ]] && { echo "Variable LogFile non définie => sortie du script.";exit 1; }
+[[ -z $FicMail            ]] && { echo "Variable FicMail non définie => sortie du script.";exit 1; }
+[[ -z $FicMailWarning     ]] && { echo "Variable FicMailWarning non définie => sortie du script.";exit 1; }
+[[ -z $FicMailWarning_URL ]] && { echo "Variable FicMailWarning_URL non définie => sortie du script.";exit 1; }
 
 let baselevel=0
 SPACES="                                           "
@@ -116,6 +117,11 @@ function fMailWarning
   echo "${*}" >> $FicMailWarning
 }
 
+function fMailWarning_URL
+{
+  echo "${*}" >> $FicMailWarning_URL
+}
+
 function fLogMail
 {
 	fLog "${*}"
@@ -126,6 +132,12 @@ function fLogMailWarning
 {
 	fLog "${*}"
 	fMailWarning "${*}"
+}
+
+function fLogMailWarning_URL
+{
+	fLog "${*}"
+	fMailWarning_URL "${*}"
 }
 
 function fLogVar
@@ -141,6 +153,11 @@ function fMailVar
 function fMailWarningVar
 {
   fEchoVar "$1" | tee -a $FicMailWarning
+}
+
+function fMailWarning_URLVar
+{
+  fEchoVar "$1" | tee -a $fMailWarning_URL
 }
 
 function fLogMailVar
