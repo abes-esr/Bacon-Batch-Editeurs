@@ -5,5 +5,5 @@ rundir/
 02_git*.sh
 git.md
 .Rhistory
-TS_Mail.conf
-TC_Mail.conf
+TS_15_Mail.conf
+TC_15_Mail.conf

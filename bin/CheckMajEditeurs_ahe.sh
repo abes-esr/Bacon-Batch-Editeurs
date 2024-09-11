@@ -428,8 +428,8 @@ TC_13_ErreurTraitement
 #TC_14_VerificationGeneraleDesErreurs
 ###############################################################
 
-TC_MailConf
-TS_MailConf
+TC_15_MailConf
+TS_15_MailConf
 TC_15_EnvoiMailRecapitulatif
 
 #

@@ -26,32 +26,6 @@ function TC_HtmlOutput
 	echo "${*}" >> $V07_RepServeurWeb"/"$FichierHtml_Editeur_Recapitulatif_desMAJ
 }
 
-function TC_MailConf
-{
-	TS_EchoFunction
-	# Sujet du mail de rapport
-  #
-  ObjetDuMessage="[BACON] $EDITEUR, $YYYYmmdd_HHMMSS"
-  Administrateurs=""
-  Fonctionnels=""
-  local Ligne=""
-  local Variable=""
-  while read Ligne
-	 do
-	   llb=${#Ligne};Ligne=${Ligne##* \#};lla=${#Ligne}
-	   [[ $lla -lt $llb ]] && continue # si ok c'est que la ligne est un commentaire
-	   Value=${Ligne##*=}
-	   [[ ${#Value} -eq 0 ]] && continue
-
-	   Variable=${Ligne%%=*}
-	   case $Variable in
-	     "Administrateurs") Administrateurs=${Value};;
-	     "Fonctionnels") Fonctionnels=${Value};;
-	     *) echo "Variable inconnue : seuls sont autorisés Administrateurs et Fonctionnels .";;
-	   esac
-   done < $BASECONF_SCRIPT/TC_Mail.conf
-}
-
 function TC_BOM_HEADER_SEPARATOR
 {
 	FILE=$1
@@ -634,6 +608,43 @@ function TC_14_VerificationGeneraleDesErreurs
 {
 	TC_EchoFunction
 
+}
+
+###############################################################
+#
+# TC_15_MailConf -> liste des destinataires du mail commune à toutes les sources
+#
+###############################################################
+function TC_15_MailConf
+{
+	TS_EchoFunction
+	# Sujet du mail de rapport
+  #
+  ObjetDuMessage="[BACON] $EDITEUR, $YYYYmmdd_HHMMSS"
+  Administrateurs=""
+  Fonctionnels=""
+
+  local Ligne=""
+  local Commentaire=""
+  local Valeur=""
+  local Variable=""
+
+  shopt -s extglob    # pour interdire : shopt -u extglob : -u = unset
+  while read Ligne
+	 do
+	   Ligne=${Ligne##+([[:space:]])} # Élimination des espaces en début de chaîne
+	   Commentaire=${Ligne:0:1}
+	   [[ $Commentaire == "#" ]] && continue # la ligne est un commentaire => on passe à la ligne suivante
+	   Valeur=${Ligne##*=};Valeur=${Valeur//\"}
+	   [[ ${#Valeur} -eq 0 ]] && continue
+
+	   Variable=${Ligne%%=*}
+	   case $Variable in
+	     "Administrateurs") Administrateurs=${Valeur};;
+	     "Fonctionnels") Fonctionnels=${Valeur};;
+	     *) echo "Variable inconnue : seuls sont autorisés Administrateurs et Fonctionnels .";;
+	   esac
+   done < $BASECONF_SCRIPT/TC_15_Mail.conf
 }
 
 ###############################################################

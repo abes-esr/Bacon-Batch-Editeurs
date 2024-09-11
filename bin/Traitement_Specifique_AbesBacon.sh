@@ -37,43 +37,7 @@ function TS_EchoFunction
   fEchom1 "    |"
 }
 
-###############################################################
-#
-# TS_MailConf : MAIL rapport du traitement
-#
-###############################################################
-#
-# liste des destinataires du mail et variable spécifique pour chaque source
-#
-function TS_MailConf
-{
-	TS_EchoFunction
-	local Variable=""
-	local Value=""
-	local Separator=""
 
-	while read Ligne
-	 do
-	   llb=${#Ligne};Ligne=${Ligne##* \#};lla=${#Ligne}
-	   [[ $lla -lt $llb ]] && continue # si ok c'est que la ligne est un commentaire
-	   Value=${Ligne##*=}
-	   [[ ${#Value} -eq 0 ]] && continue
-
-	   Variable=${Ligne%%=*}
-	   Separator=""
-	   case $Variable in
-	     "Administrateurs")
-	       [[ ${#Administrateurs} -gt 0 ]] && Separator=","
-	       Administrateurs=${Administrateurs}${Separator}${Value}
-	       ;;
-	     "Fonctionnels")
-	       [[ ${#Fonctionnels} -gt 0 ]] && Separator=","
-	       Fonctionnels=${Fonctionnels}${Separator}${Value}
-	       ;;
-	     *) echo "Variable inconnue : seuls sont autorisés Administrateurs et Fonctionnels .";;
-	   esac
-   done < $BASECONF_SCRIPT_EDITEUR/TS_Mail.conf
-}
 ###############################################################
 #
 # TS_00_DateHeure_DuDernier_Traite_OwnCloud : récupère la date et l'heure du dernier traitement effectué par Traite_OwnCloud
@@ -340,4 +304,48 @@ function TS_13_ErreurTraitement
 	fi
 
 	nb_fic_traite=$nb_fic_total
+}
+
+###############################################################
+#
+# TS_15_MailConf : MAIL rapport du traitement
+#
+###############################################################
+#
+# liste des destinataires du mail et variable spécifique pour chaque source
+#
+function TS_15_MailConf
+{
+	TS_EchoFunction
+
+	local Ligne=""
+	local Commentaire=""
+	local Variable=""
+	local Valeur=""
+	local Separateur=""
+
+	shopt -s extglob    # pour interdire : shopt -u extglob : -u = unset
+
+	while read Ligne
+	 do
+     Ligne=${Ligne##+([[:space:]])} # Élimination des espaces en début de chaîne
+	   Commentaire=${Ligne:0:1}
+	   [[ $Commentaire == "#" ]] && continue # la ligne est un commentaire => on passe à la ligne suivante
+	   Valeur=${Ligne##*=};Valeur=${Valeur//\"}
+	   [[ ${#Valeur} -eq 0 ]] && continue
+
+	   Variable=${Ligne%%=*}
+	   Separateur=""
+	   case $Variable in
+	     "Administrateurs")
+	       [[ ${#Administrateurs} -gt 0 ]] && Separateur=","
+	       Administrateurs=${Administrateurs}${Separateur}${Valeur}
+	       ;;
+	     "Fonctionnels")
+	       [[ ${#Fonctionnels} -gt 0 ]] && Separateur=","
+	       Fonctionnels=${Fonctionnels}${Separateur}${Valeur}
+	       ;;
+	     *) echo "Variable inconnue : seuls sont autorisés Administrateurs et Fonctionnels .";;
+	   esac
+   done < $BASECONF_SCRIPT_EDITEUR/TS_15_Mail.conf
 }

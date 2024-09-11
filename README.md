@@ -120,7 +120,22 @@ Couperin
 TechniquesIngenieur
 ProjectMuse ---
 ```
+#### Configuration of CheckMajEditeur.sh pour AbesBacon
+```
+conf 
+│ 
+...
+├── CheckMajEditeurs_ahe
+│   ├── AbesBacon
+│   │   ├── TS_04_CorrectionsDuNomDuFichier.tsv
+│   │   ├── TS_08_FichiersADupliquerDansDerniereVersion.txt
+│   │   ├── TS_15_Mail.conf
+│   │   └── TS_15_Mail.conf.4git
+...
+    ├── TC_15_Mail.conf
+    └── TC_15_Mail.conf.4git
 
+```
 ### Recovery from publishers : Autre (others)
 
 Files are fetch from publishers web site by a curl request.
