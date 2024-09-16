@@ -386,18 +386,6 @@ let baselevel--
 # Envoi du mail de rapport
 ###############################################################
 
-
-###############################################################
-# Ajout du nombre de maj au sujet du message mail si des modifications
-# ont été détectées sur un ou plusieurs fichiers
-#
-MAJ=""
-case $nb_fic_maj in
- 0) MAJ="pas de mises à jour.";;
- 1) MAJ="1 mise à jour.";;
- *) MAJ="$nb_fic_maj mises à jour.";;
-esac
-ObjetDuMessage=$ObjetDuMessage" : "$MAJ
 ###############################################################
 # Création du fichier HTML résult
 #
@@ -429,6 +417,17 @@ TC_13_ErreurTraitement
 ###############################################################
 
 TC_15_MailConf
+###############################################################
+# Ajout du nombre de maj au sujet du message mail si des modifications
+# ont été détectées sur un ou plusieurs fichiers
+#
+MAJ=""
+case $nb_fic_maj in
+ 0) MAJ="pas de mises à jour.";;
+ 1) MAJ="1 mise à jour.";;
+ *) MAJ="$nb_fic_maj mises à jour.";;
+esac
+ObjetDuMessage=$ObjetDuMessage" : "$MAJ
 TS_15_MailConf
 TC_15_EnvoiMailRecapitulatif
 
