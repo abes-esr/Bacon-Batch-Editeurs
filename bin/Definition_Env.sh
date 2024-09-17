@@ -139,6 +139,13 @@ fMailWarning "----------------------------------"
 fMailWarning "📜 Les compléments d'information se trouvent dans le fichier de log : "
 fMailWarning "$LogFile"
 fMailWarning
+
+fMailWarning_URL "-----------------------------------------------------------"
+fMailWarning_URL "📜 Le fichier contenant les REDIRECTIONs d'URL est : "
+fMailWarning_URL "$FicMailWarning_URL"
+fMailWarning_URL "-----------------------------------------------------------"
+fMailWarning_URL
+
 ###############################################################
 #
 # Variables générales du programme
