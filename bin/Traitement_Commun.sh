@@ -155,9 +155,12 @@ function TC_03_Conformite_KBART
   local rcTC_BHS=$?
   if [[ ${rcTC_BHS} -eq 255 ]]
    then
-    fLogMail "URL du fichier : "$url
+    fLogMail
+    fLogMail "🌵 URL du fichier : ${url}"
+    fLogMail "ou le fichier ${V03_FichierKBART}"
     fLogMail "La ligne d'entête du fichier ne contient même pas publication_title comme indicateur de colonne !!!"
-    fLogMail "$( head -n 250 $V03_FichierKBART )"
+    fLogMail "$( head -c 250 ${V03_FichierKBART} )"
+    fLogMail
     return 255
   fi
 	if [[ $TC_BHS_Separator != $'\t' ]]
