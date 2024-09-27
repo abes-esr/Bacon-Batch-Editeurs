@@ -1,0 +1,11 @@
+#ACP:All ACP Journals	ACP_GLOBAL_ALLJOURNALS	https://www.acpjournals.org/pb-assets/kbart/KBART_ALL%20ACP%20Journals_Global_AllTitles_5_21_21-1621876772677.txt	KBART_ALL+ACP+Journals_Global_AllTitles_5_21_21
+#ASCE:ASCE All Titles	ASCE_GLOBAL_ALLJOURNALS	https://ascelibrary.org/pb-assets/images/USER%20SERVICES/FILES/ASCE_AllTitles-1715652974693.txt	ASCE_AllTitles
+#ASCE:ASCE E-books	ASCE_GLOBAL_ALLEBOOKS	https://ascelibrary.org/pb-assets/images/USER%20SERVICES/FILES/ASCE_Ebooks-1715652974423.txt	ASCE_Ebooks
+#ASCE:ASCE Journals	ASCE_GLOBAL_JOURNALS	https://ascelibrary.org/pb-assets/images/USER%20SERVICES/FILES/ASCE_Journals-1715652974993.txt	ASCE_Journals
+EUP:EUP Full Title List (Complete Collection)	EUP_GLOBAL_ALLJOURNALS	https://www.euppublishing.com/pb-assets/KBART_title_lists/EUP_Title_List-1647862501.txt	EUP_Title_List
+#IEEE:IEEE Xplore All Books	IEEE_GLOBAL_ALLEBOOKS	https://ieeexplore.ieee.org/otherfiles/IEEEXplore_Global_All-eBooks.txt	IEEEXplore_Global_All-eBooks
+#IEEE:IEEE Xplore All Journals	IEEE_GLOBAL_ALLJOURNALS	https://ieeexplore.ieee.org/otherfiles/IEEEXplore_Global_All-Journals.txt	IEEEXplore_Global_All-Journals
+#IEEEXplore:Global IEL	IEEE_Global_IEL	https://ieeexplore.ieee.org/otherfiles/IEEEXplore_Global_IEL.txt	IEEEXplore_Global_IEL
+SIAM Journals	SIAM_GLOBAL_ALLJOURNALS	https://epubs.siam.org/pb-assets/kbart/All-Journals.txt	siam_All-Journals
+TAYLORANDFRANCIS:Taylor & Francis Current Content Access	TAYLORANDFRANCIS_GLOBAL_OA-JOURNALS	https://www.tandfonline.com/action/contentHoldings?code=JCTCPF_N_2013_016	TaylorandFrancisOnline_Global_TaylorandFrancisCurrentContentAccess_2024-05-16
+TAYLORANDFRANCIS:Taylor & Francis Open Access	TAYLORANDFRANCIS_GLOBAL_ALLJOURNALS	https://www.tandfonline.com/action/contentHoldings?code=TF_Open	TaylorandFrancisOnline_Global_TaylorandFrancisOpen_2024-05-16
