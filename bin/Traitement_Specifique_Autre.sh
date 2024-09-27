@@ -53,18 +53,17 @@ function TS_01_Pre_Traitement
 
   fEchof "Récupération du fichier d'entrée géré par l'ABES."
 
-
   local FicEntree=${BASECONF_SCRIPT_EDITEUR}/TS_01_URLsATraiter.tsv
   fEchoVarf "FicEntree"
   [[ ! -s $FicEntree ]] && { fEchof "Le fichier d'entrée $FicEntree n'existe pas ou est vide."; return 1; }
   cp $FicEntree $V01_Fichier_Entree_pourMajEditeur
   fEchof
   fEchof "La ligne complete devrait contenir les champs suivants :"
-  fEchof "1       2       3   4         5              6       7"
-  fEchof "Editeur NomFic1 URL Extension DateMajEditeur NomFic2 ATraiterOuiNon"
-  fEchof "Or elle ne contient que les 4 premiers ; il manque donc : DateMajEditeur NomFic2 ATraiterOuiNon"
+  fEchof "1       2       3   4         5              6       7              8"
+  fEchof "Editeur NomFic1 URL Extension DateMajEditeur NomFic2 ATraiterOuiNon Commande"
+  fEchof "Or elle ne contient que les 4 premiers ; il manque donc : DateMajEditeur NomFic2 ATraiterOuiNon Commande"
   fEchof "Rajout des champs manquants."
-  sed -e "s/.*/&\t"$(date +'%Y-%m-%d')"\t\tO/" --in-place $V01_Fichier_Entree_pourMajEditeur
+  sed -e "s/.*/&\t"$(date +'%Y-%m-%d')"\t\tO\t/" --in-place $V01_Fichier_Entree_pourMajEditeur
 	return $?
 }
 
@@ -97,6 +96,7 @@ function TS_03_RecuperationDuFichierKBART
 	fichier=${fichier//\//_}
 	V03_FichierKBART=${RUNDIR}/03/${fichier}
 	V03_FichierKBART_stderr=${V03_FichierKBART}"_stderr"
+	V03_FichierKBART_headers=${V03_FichierKBART}"_headers"
 	fEchoVarf "V03_FichierKBART"
 	fEchoVarf "V03_FichierKBART_stderr"
 	###############################################################
@@ -105,7 +105,7 @@ function TS_03_RecuperationDuFichierKBART
 	fEcho "   $lURL \\"
 	fEcho "  -o $V03_FichierKBART \\"
 	fEcho "  --stderr $V03_FichierKBART_stderr"
-	curl -L -v --silent --show-error --max-redirs 10 $lURL -o $V03_FichierKBART --stderr $V03_FichierKBART_stderr
+	curl -L -v --silent --show-error --max-redirs 10 $lURL -o $V03_FichierKBART --stderr $V03_FichierKBART_stderr --dump-header $V03_FichierKBART_headers
 	local rcCURL=$?
 	fEchoVarf "rcCURL"
 	[[ $rcCURL -ne 0 ]] && { man curl | grep "EXIT CODES" -A 200 | grep -e "[[:space:]]\+${rcCURL}[[:space:]]\+" -A 1 ; }

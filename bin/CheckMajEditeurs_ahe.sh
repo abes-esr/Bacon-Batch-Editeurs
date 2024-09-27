@@ -192,6 +192,7 @@ for (( cl=0;cl<$cLines;cl++ ))
   fEcho "*************************************"
   fEchoVars "line"
   [[ -z $line ]] && { fEcho "ligne vide : pas de traitement." ; continue; }
+  [[ ${line:0:1} == "#" ]] && { fEcho "ligne en commentaire : pas de traitement." ; continue; }
   # Récupération des champs de line
 	# 1       2                   3                                   4     5           6 7
   # EDITEUR	Book_Coverage_KBART	Book_Coverage_KBART_2017-01-29.tsv	.tsv	2017-01-29		N
@@ -204,12 +205,13 @@ for (( cl=0;cl<$cLines;cl++ ))
   #   ==> il faut gérer les blancs car dans notre usage ce ne sont pas des séparateurs.
 
   fEchof "1 ) Transformation des champs au contenu vide ( rien entre 2 tabulations ) par le mot \"vide\" => <tab><tab> devient <tab>vide<tab>"
+  fEchof "    de même <début de ligne><tab> devient <début de ligne>vide<tab> et <tab><fin de ligne> devient <tab>vide<fin de ligne>"
   #
   # remarque : la règle est appliquée 2 fois car le pointeur sur la chaîne avance après la première substitution et dépasse le deuxième \t ,
   #     puisqu'il est inclus dans la première substitution - cette façon de faire évite les boucles infinies ;
   #     il faut donc faire une deuxième passe sur les \t délaissés.
   #             dans \t\t\t seuls les 2 premiers \t seraient traités.
-  LigneSansVides=$( sed -e "s/\t\t/\tvide\t/g;s/\t\t/\tvide\t/g" <<<  "$line" )
+  LigneSansVides=$( sed -e "s/^\t/vide\t/;s/\t\t/\tvide\t/g;s/\t\t/\tvide\t/g;s/\t$/\tvide/" <<<  "$line" )
 
   fEchof "2 ) Protection des espaces blancs : \" \"=32=\x20 ==> unicode zone privée panel 1 (E000 + 0020) = \u{E020}=\xee\x80\xa0 "
   LigneSansBlancs=$( sed -e "s/ /\xee\x80\xa0/g" <<<  "$LigneSansVides" )
@@ -236,9 +238,8 @@ for (( cl=0;cl<$cLines;cl++ ))
   fi
 
 	V03_FichierKBART="$RUNDIR/03_FichierKBART"
-	V03_FichierKBART_erreurs="$RUNDIR/03_FichierKBART_erreurs"
 
-	TS_03_RecuperationDuFichierKBART "$URL"
+	TS_03_RecuperationDuFichierKBART "$URL" "$NomFic1"
 	# même en cas de 404 NOT FOUND rcCurl=0 : en effet la réponse est bien revenue.
 	TS_03_ErreurDansLaRecuperationDuFichierKBART "$URL"
 	if [[ $? -ne 0 ]]

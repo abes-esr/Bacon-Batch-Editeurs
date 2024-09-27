@@ -114,6 +114,7 @@ function TS_03_RecuperationDuFichierKBART
 {
 	TS_EchoFunction
 	local fichier="$1" # fichier dans le cas d'AbesBacon, url sinon
+	local commande="$2" # SANS INTÉRÊT ici => voir Autre
 	# Pour "AbesBacon" : récupération dans le répertoire OwnCloud de l'éditeur
 	#
 	###############################################################
