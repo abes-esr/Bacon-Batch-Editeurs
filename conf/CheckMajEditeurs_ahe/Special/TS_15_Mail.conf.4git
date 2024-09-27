@@ -1,0 +1,4 @@
+# Seuls sonts autorisés Administrateurs et Fonctionnels .
+# La variable Administrateurs est définie dans TC_Mail.conf
+Administrateurs="admin3@domain.xx"
+Fonctionnels="fonctional1@domain.xx,fonctional2@domain.xx"

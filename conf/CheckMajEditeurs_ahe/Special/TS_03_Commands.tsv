@@ -1,0 +1,12 @@
+#ACP_GLOBAL_ALLJOURNALS
+#ASCE_GLOBAL_ALLJOURNALS
+#ASCE_GLOBAL_ALLEBOOKS
+#ASCE_GLOBAL_JOURNALS
+EUP_GLOBAL_ALLJOURNALS	curl -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0" "$URL" --output $V03_FichierKBART --stderr $V03_FichierKBART_stderr --dump-header $V03_FichierKBART_headers
+#IEEE_GLOBAL_ALLEBOOKS	curl -H @${BASECONF_SCRIPT_EDITEUR}/TS_03_HTTPHeader_IEEE_GLOBAL_ALLEBOOKS "$URL" --output $V03_FichierKBART --stderr $V03_FichierKBART_stderr --dump-header $V03_FichierKBART_headers
+IEEE_GLOBAL_ALLEBOOKS	curl -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0" "$URL" --output $V03_FichierKBART --stderr $V03_FichierKBART_stderr --dump-header $V03_FichierKBART_headers
+IEEE_GLOBAL_ALLJOURNALS	curl -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0" "$URL" --output $V03_FichierKBART --stderr $V03_FichierKBART_stderr --dump-header $V03_FichierKBART_headers
+IEEE_Global_IEL	curl -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0" "$URL" --output $V03_FichierKBART --stderr $V03_FichierKBART_stderr --dump-header $V03_FichierKBART_headers
+SIAM_GLOBAL_ALLJOURNALS	curl -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0" "$URL" --output $V03_FichierKBART --stderr $V03_FichierKBART_stderr --dump-header $V03_FichierKBART_headers
+TAYLORANDFRANCIS_GLOBAL_OA-JOURNALS	curl -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0" "$URL" --output $V03_FichierKBART --stderr $V03_FichierKBART_stderr --dump-header $V03_FichierKBART_headers
+TAYLORANDFRANCIS_GLOBAL_ALLJOURNALS	curl -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:130.0) Gecko/20100101 Firefox/130.0" "$URL" --output $V03_FichierKBART --stderr $V03_FichierKBART_stderr --dump-header $V03_FichierKBART_headers
