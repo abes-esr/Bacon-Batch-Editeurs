@@ -26,10 +26,15 @@
 ###############################################################
 
 # crontab -l
-#30 21  * * 0-4  /home/devel/MajEditeurs/Traite_OwnCloud.sh AbesBacon 1 > /home/devel/MajEditeurs/Erreur/errOwnCloud.txt 2> /home/devel/MajEditeurs/Erreur/errOwnCloud2.txt
+#35 21  * * 0-4  /home/devel/MajEditeurs_ahe/bin/Traite_OwnCloud_ahe.sh "AbesBacon" "1" 2>>/home/devel/MajEditeurs_ahe/rundir/Traite_OwnCloud_ahe/stderr.log
+# puis :
+#45 21  * * 0-4  /home/devel/MajEditeurs_ahe/bin/CheckMajEditeurs_ahe.sh "AbesBacon" 2>/home/devel/MajEditeurs_ahe/rundir/CheckMajEditeurs_ahe/AbesBacon/stderr.log
 
-#40 21  * * 0-4  /home/devel/MajEditeurs/CheckMajEditeurs.sh AbesBacon > /home/devel/MajEditeurs/Erreur/errAbesBacon.txt 2> /home/devel/MajEditeurs/Erreur/errAbesBacon2.txt
-
+##############################################################
+#
+# Debut des fonctions
+#
+##############################################################
 function fUsage
 {
 	echo
@@ -90,6 +95,12 @@ function fAfficheVariables
   fVariables "V06_Dossiers_Archive"
 }
 
+##############################################################
+#
+# Fin des fonctions
+#
+##############################################################
+
 if [[ $# -ne 2 ]]
  then
   fUsage "$#"
@@ -104,6 +115,9 @@ SCRIPT=$( basename $BASH_SOURCE );SCRIPT=${SCRIPT%.sh}
 . $RACINE/bin/Definition_Env.sh
 
 #echo $SCRIPT
+#[devel@begonia ~]$ df -h
+#Sys. de fichiers                                 Taille Utilisé Dispo Uti% Monté sur
+#erebus.v102.abes.fr:/mnt/EREBUS/zpool_data/bacon   9,0T    7,8T  1,3T  86% /home/devel/bacon
 
 RepOwnCloud="/home/devel/bacon" #
 V00_EditeursATraiter_DefinisParABES="$BASECONF_SCRIPT_EDITEUR/00_EditeursATraiter_DefinisParABES.txt" # Fichier commun à tous les traitements AbesBacon : contient la liste des éditeurs à traiter

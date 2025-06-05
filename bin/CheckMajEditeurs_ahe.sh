@@ -28,12 +28,16 @@
 
 # EXEMPLES d'appel sur begonia
 # crontab -l
-# 45 20  * * *  /home/devel/MajEditeurs/CheckMajEditeurs.sh ProQuest > /home/devel/MajEditeurs/Erreur/errProQuest.txt 2> /home/devel/MajEditeurs/Erreur/errProQuest2.txt
-# 00 20  * * *  /home/devel/MajEditeurs/CheckMajEditeurs.sh EBSCO > /home/devel/MajEditeurs/Erreur/errEBSCO.txt 2> /home/devel/MajEditeurs/Erreur/errEBSCO2.txt
-# 30 21  * * 0-4  /home/devel/MajEditeurs/Traite_OwnCloud.sh AbesBacon 1 > /home/devel/MajEditeurs/Erreur/errOwnCloud.txt 2> /home/devel/MajEditeurs/Erreur/errOwnCloud2.txt
-# 40 21  * * 0-4  /home/devel/MajEditeurs/CheckMajEditeurs.sh AbesBacon > /home/devel/MajEditeurs/Erreur/errAbesBacon.txt 2> /home/devel/MajEditeurs/Erreur/errAbesBacon2.txt
-# 50 23  * * 0-4  /home/devel/MajEditeurs/CheckMajEditeurs.sh Autre > /home/devel/MajEditeurs/Erreur/errAutre.txt 2> /home/devel/MajEditeurs/Erreur/errAutre2.txt
-# 00 23  * * 0-4  /home/devel/MajEditeurs/CheckMajEditeurs.sh KbPlus > /home/devel/MajEditeurs/Erreur/errKbPlus.txt 2> /home/devel/MajEditeurs/Erreur/errKbPlus2.txt
+#45 21  * * 0-4  /home/devel/MajEditeurs_ahe/bin/CheckMajEditeurs_ahe.sh "AbesBacon" 2>/home/devel/MajEditeurs_ahe/rundir/CheckMajEditeurs_ahe/AbesBacon/stderr.log
+#
+#00 23  * * 0-4  /home/devel/MajEditeurs_ahe/bin/CheckMajEditeurs_ahe.sh "Autre" 2>/home/devel/MajEditeurs_ahe/rundir/CheckMajEditeurs_ahe/Autre/stderr.log
+#15 23  * * 0-4  /home/devel/MajEditeurs_ahe/bin/CheckMajEditeurs_ahe.sh "Special" 2>/home/devel/MajEditeurs_ahe/rundir/CheckMajEditeurs_ahe/Special/stderr.log
+
+###############################################################
+#
+# Debut des fonctions
+#
+###############################################################
 
 function CMajE_Usage
 {
@@ -230,7 +234,7 @@ for (( cl=0;cl<$cLines;cl++ ))
 	TS_02_AtraiterOuiNon "$ATraiterOuiNon"
   if [[ $? -ne 0 ]]
    then
-    fEcho "Cette ligne n'est pas à traiter ==> Traitement  partiel pour alimenter le fichier résultat HTML."
+    fEcho "Cette ligne n'est pas à traiter ==> Traitement partiel pour alimenter le fichier résultat HTML."
     TC_02_FichierNonATraiter "$cl"
     continue
    else

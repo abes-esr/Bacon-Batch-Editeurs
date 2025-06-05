@@ -17,6 +17,8 @@ garnier
 harmattan
 lavoisier
 LEH
+Lexbase
+LexisNexis
 Lextenso
 mathdoc
 Mirabel

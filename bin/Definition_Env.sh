@@ -90,7 +90,7 @@ function ENV_AfficheVariables
 ###############################################################
 #
 # Variables générales liées au serveur (PROD / TEST)
-# $EDITEUR correspond à la source (AbesBacon,CUFTS,KbPlus)
+# $EDITEUR correspond à la source (AbesBacon,Autre,Special)
 #
 ###############################################################
 
