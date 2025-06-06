@@ -284,9 +284,26 @@ function TS_13_ErreurTraitement
 	# on envoie en mail le delta entre les éditeurs autorisés par l'ABES et ceux présents dans owncloud.
 	# Ce delta a été généré par le script Traite_OwnCloud qui passe avant le script MajEditeurs
 
-	# $V02_FichiersATraiter_EditeursNONSelectionnesParABES de Traite_OwnCloud.sh # cette liste sera transmise par mail par CheckMajEditeurs.sh
-  local FichierDesNonSelectionnesParABES=$DateHeure_DuDernier_RUNDIR_DeTraite_OwnCloud/"02_FichiersATraiter_EditeursNONSelectionnesParABES"
+  local FichiersNonConformes_EditeursSelectionnesParABES="$DateHeure_DuDernier_RUNDIR_DeTraite_OwnCloud/02_FichiersNonConformes_EditeursSelectionnesParABES" #
+  fEchoVarf "FichiersNonConformes_EditeursSelectionnesParABES"
+  if [[ -s $FichiersNonConformes_EditeursSelectionnesParABES ]]
+   then
+		fLogMail ""
+		fLogMail "------------------------------------------------------------"
+		fLogMail "Noms de fichier non conformes aux règles de nommage des fichiers : "
+		cat $FichiersNonConformes_EditeursSelectionnesParABES | uniq >> $FicMail
+		fLogMail "------------------------------------------------------------"
+		fLogMail ""
+	 else
+		fLogMail "----------------------------------------------------------------------------------"
+		fLogMail "  Pas de fichiers nouveaux dont le nom serait non conforme aux règles de nommage."
+		fLogMail "----------------------------------------------------------------------------------"
+		fEchof "Le fichier FichiersNonConformes_EditeursSelectionnesParABES n'existe pas ou est vide."
+		fEchoVarf "FichiersNonConformes_EditeursSelectionnesParABES"
+	fi
 
+  # $V02_FichiersATraiter_EditeursNONSelectionnesParABES de Traite_OwnCloud.sh # cette liste sera transmise par mail par CheckMajEditeurs.sh
+  local FichierDesNonSelectionnesParABES=$DateHeure_DuDernier_RUNDIR_DeTraite_OwnCloud/"02_FichiersATraiter_EditeursNONSelectionnesParABES"
   fEchoVarf "FichierDesNonSelectionnesParABES"
   if [[ -s $FichierDesNonSelectionnesParABES ]]
    then

@@ -124,6 +124,7 @@ V00_EditeursATraiter_DefinisParABES="$BASECONF_SCRIPT_EDITEUR/00_EditeursATraite
 V01_FichiersATraiter_TousEditeurs="$RUNDIR/01_FichiersATraiter_TousEditeurs" # contient la liste des fichiers à traiter
 
 V02_FichiersATraiter_EditeursSelectionnesParABES="$RUNDIR/02_FichiersATraiter_EditeursSelectionnesParABES" #
+V02_FichiersNonConformes_EditeursSelectionnesParABES="$RUNDIR/02_FichiersNonConformes_EditeursSelectionnesParABES" #
 V02_DossiersATraiter_EditeursSelectionnesParABES="$RUNDIR/02_DossiersATraiter_EditeursSelectionnesParABES" #
 V02_FichiersATraiter_EditeursNONSelectionnesParABES="$RUNDIR/02_FichiersATraiter_EditeursNONSelectionnesParABES" #
 
@@ -174,6 +175,34 @@ fEcho
 fEchof "PHASE 1 : Établit la liste des fichiers, sous le répertoire $RepOwnCloud, mis à jour depuis le dernier traitement"
 fEchof "        ; prend en compte les coupures du week end ou les coupures exceptionnelles."
 fEchof
+
+> $V02_FichiersATraiter_EditeursSelectionnesParABES
+
+mapfile -t aEditeursATraiter < $V00_EditeursATraiter_DefinisParABES
+cEditeursATraiter=${#aEditeursATraiter[*]}
+fEcho "$cEditeursATraiter lignes dans le fichier $V00_EditeursATraiter_DefinisParABES"
+for (( cl=0;cl<$cEditeursATraiter;cl++ ))
+ do
+  EditeurATraiter="${aEditeursATraiter[$cl]}"
+  find ${RepOwnCloud}/${EditeurATraiter} -maxdepth 1 -type f -mtime -$nbjour \
+  | sed -e "s:${RepOwnCloud}/::" \
+  | sed -n "/_20[[:digit:]]\{2\}-\(0[1-9]\|1[0-2]\)-\(0[1-9]\|[1-2][[:digit:]]\|3[0-1]\)/p" \
+  | sort -r \
+  >> $V02_FichiersATraiter_EditeursSelectionnesParABES
+ done
+
+# La liste des fichiers non conformes sera transmise par mail par CheckMajEditeurs.sh
+> $V02_FichiersNonConformes_EditeursSelectionnesParABES
+for (( cl=0;cl<$cEditeursATraiter;cl++ ))
+ do
+  EditeurATraiter="${aEditeursATraiter[$cl]}"
+  find ${RepOwnCloud}/${EditeurATraiter} -maxdepth 1 -type f -mtime -$nbjour \
+  | sed -e "s:${RepOwnCloud}/::" \
+  | sed -n "/_20[[:digit:]]\{2\}-\(0[1-9]\|1[0-2]\)-\(0[1-9]\|[1-2][[:digit:]]\|3[0-1]\)/!p" \
+  | sort -r \
+  >> $V02_FichiersNonConformes_EditeursSelectionnesParABES
+ done
+
 fEchof "find $RepOwnCloud -type f -mtime -$nbjour \ "
 fEchof "  | cut -d/ -f5,6 \ "
 fEchof "  | sed -n \"/_20[[:digit:]]\{2\}-\(0[1-9]\|1[0-2]\)-\(0[1-9]\|[1-2][[:digit:]]\|3[0-1]\)/p\" \ "
@@ -199,7 +228,7 @@ fEchof "PHASE 2 : Suppression des éditeurs qui n'appartiennent pas à la liste 
 fEchof
 fEchoVarf "V00_EditeursATraiter_DefinisParABES"
 fEchof
-# J'ajoute dans la sedline les éditeurs autorisés par l'ABES
+# J'ajoute dans la sedline les répertoires des éditeurs autorisés par l'ABES
 SEDLINE=""
 while read line
  do
@@ -210,7 +239,7 @@ SEDLINE=${SEDLINE:2}
 SEDLINE="^\(${SEDLINE}\)\/"
 #fEchoVar "SEDLINE"
 #echo "sed -e \"$SEDLINE\" $V01_FichiersATraiter_TousEditeurs > $V02_FichiersATraiter_EditeursSelectionnesParABES"
-sed -e "/${SEDLINE}/!d" $V01_FichiersATraiter_TousEditeurs | sort > $V02_FichiersATraiter_EditeursSelectionnesParABES
+#sed -e "/${SEDLINE}/!d" $V01_FichiersATraiter_TousEditeurs | sort > $V02_FichiersATraiter_EditeursSelectionnesParABES
 
 # La liste des fichiers à traiter non sélectionnés sera transmise par mail par CheckMajEditeurs.sh
 sed -e "/${SEDLINE}/d" $V01_FichiersATraiter_TousEditeurs | sort | uniq > $V02_FichiersATraiter_EditeursNONSelectionnesParABES
