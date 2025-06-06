@@ -7,3 +7,7 @@ git.md
 .Rhistory
 TS_15_Mail.conf
 TC_15_Mail.conf
+bin/node_modules/
+bin/package-lock.json
+bin/package.json
+bin/puppeteer.js
