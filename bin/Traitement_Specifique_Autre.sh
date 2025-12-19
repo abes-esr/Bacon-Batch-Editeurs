@@ -92,8 +92,19 @@ function TS_03_RecuperationDuFichierKBART
 	# les commandes curl pouvant générer des erreurs ; je conserve les fichiers d'erreurs de chaque commande dans un fichier séparé
 	# ==> je transforme l'url en nom de fichier :
 	# https://dl.acm.org/feeds/acm_kbart_books.txt devient dl.acm.org_feeds_acm_kbart_books.txt
+	#
+	fEchof "Création du nom de fichier à partir de l'URL en excluant tous les caractères spéciaux"
 	local fichier=${lURL#*:\/\/}
-	fichier=${fichier//\//_}
+	# URL Encoding (Percent Encoding)
+	# URL encoding converts characters into a format that can be transmitted over the Internet.
+	# URLs can only be sent over the Internet using the ASCII character-set.
+	# Since URLs often contain characters outside the ASCII set, the URL has to be converted into a valid ASCII format.
+	# URL encoding replaces unsafe ASCII characters with a "%" followed by two hexadecimal digits.
+	# URLs cannot contain spaces. URL encoding normally replaces a space with a plus (+) sign or with %20.
+	fichier=${fichier//[\.\?\&\/\,\=\+\:]/_};fichier=${fichier//\%[[:alnum:]][[:alnum:]]/_}
+	fichier=${fichier//__/_};fichier=${fichier//__/_}
+	fEchof "Limitation du nom de fichier à 255 caractères."
+	fichier=${fichier:0:255}
 	V03_FichierKBART=${RUNDIR}/03/${fichier}
 	V03_FichierKBART_stderr=${V03_FichierKBART}"_stderr"
 	V03_FichierKBART_headers=${V03_FichierKBART}"_headers"
@@ -101,14 +112,22 @@ function TS_03_RecuperationDuFichierKBART
 	fEchoVarf "V03_FichierKBART_stderr"
 	###############################################################
 	# Exécution de l'url et récupération du fichier correspondant
-	fEcho "curl -L -v --max-redirs 10 \\"
+	# ahe : 2025-08-07 : rajout de --insecure ( -k ) car le bundle de certificat d'autorités peut ne pas être à jour
+	#                    avec les dernières autorités de certification ( certificats racines ).
+	#                    => avec --insecure on accepte les certificats signés par une Autorité de certification que l'on ne connait pas !!
+	#                    Mais le risque est mesuré car c'est nous qui récupérons de la donnée sur des sites institutionnels
+	#
+	#                    Une meilleure solution serait d'utiliser l'option --ca-native pour aller chercher les Autorités dans le bundle de l'OS.
+	#                    Mais cette option n'existe qu'à partir de la version 8.11 de curl ; nous sommes en 7.29 et en redhat 7.9, sans maj possible !!
+	#                    => À migrer
+	fEcho "curl -L -v --silent --insecure --show-error --max-redirs 10 \\"
 	fEcho "   $lURL \\"
 	fEcho "  -o $V03_FichierKBART \\"
 	fEcho "  --stderr $V03_FichierKBART_stderr"
-	curl -L -v --silent --show-error --max-redirs 10 $lURL -o $V03_FichierKBART --stderr $V03_FichierKBART_stderr --dump-header $V03_FichierKBART_headers
+	curl -L -v --silent --insecure --show-error --max-redirs 10 "$lURL" -o "$V03_FichierKBART" --stderr "$V03_FichierKBART_stderr" --dump-header "$V03_FichierKBART_headers"
 	local rcCURL=$?
 	fEchoVarf "rcCURL"
-	[[ $rcCURL -ne 0 ]] && { man curl | grep "EXIT CODES" -A 200 | grep -e "[[:space:]]\+${rcCURL}[[:space:]]\+" -A 1 ; }
+	fEcho $( [[ $rcCURL -ne 0 ]] && { man curl | grep "EXIT CODES" -A 200 | grep -e "[[:space:]]\+${rcCURL}[[:space:]]\+" -A 1 ; } )
   return $rcCURL
 }
 

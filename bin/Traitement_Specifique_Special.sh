@@ -92,14 +92,25 @@ function TS_02_AtraiterOuiNon
 function TS_03_RecuperationDuFichierKBART
 {
 	TS_EchoFunction
-	local URL="$1"
+	local lURL="$1"
 	local lNomFic1="$2"
 	#fEchoVarf "lNomFic1"
 	# les commandes curl pouvant générer des erreurs ; je conserve les fichiers d'erreurs de chaque commande dans un fichier séparé
 	# ==> je transforme l'url en nom de fichier :
 	# https://dl.acm.org/feeds/acm_kbart_books.txt devient dl.acm.org_feeds_acm_kbart_books.txt
-	local fichier=${URL#*:\/\/}
-	fichier=${fichier//\//_}
+	#
+	fEchof "Création du nom de fichier à partir de l'URL en excluant tous les caractères spéciaux"
+	local fichier=${lURL#*:\/\/}
+	# URL Encoding (Percent Encoding)
+	# URL encoding converts characters into a format that can be transmitted over the Internet.
+	# URLs can only be sent over the Internet using the ASCII character-set.
+	# Since URLs often contain characters outside the ASCII set, the URL has to be converted into a valid ASCII format.
+	# URL encoding replaces unsafe ASCII characters with a "%" followed by two hexadecimal digits.
+	# URLs cannot contain spaces. URL encoding normally replaces a space with a plus (+) sign or with %20.
+	fichier=${fichier//[\.\?\&\/\,\=\+\:]/_};fichier=${fichier//\%[[:alnum:]][[:alnum:]]/_}
+	fichier=${fichier//__/_};fichier=${fichier//__/_}
+	fEchof "Limitation du nom de fichier à 255 caractères."
+	fichier=${fichier:0:255}
 	V03_FichierKBART=${RUNDIR}/03/${fichier}
 	V03_FichierKBART_stderr=${V03_FichierKBART}"_stderr"
 	V03_FichierKBART_headers=${V03_FichierKBART}"_headers"
@@ -110,6 +121,8 @@ function TS_03_RecuperationDuFichierKBART
 	# Recherche de la commande à passer dans le fichier TS_03_Commands.tsv
 	local lCommandFile=${BASECONF_SCRIPT_EDITEUR}/TS_03_Commands.tsv
 	local lCommand=$( sed -e "/^[[:blank:]]*${lNomFic1}/!d" -e "s/${lNomFic1}\t//" $lCommandFile )
+	# ahe : 2025-08-07 : rajout de --insecure ( -k ) dans les curls de TS_03_Commands.tsv
+	#                    cf commentaire dans Traitement_Specifique_Autre.sh/TS_03_RecuperationDuFichierKBART
 	###############################################################
 	# Exécution de l'url et récupération du fichier correspondant
 	#cat ${BASECONF_SCRIPT_EDITEUR}/TS_03_HTTPHeader_IEEE_GLOBAL_ALLEBOOKS

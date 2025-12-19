@@ -27,6 +27,9 @@
 [[ -z $SCRIPT  ]] && { echo "Variable SCRIPT  non assignée => sortie du script.";exit 1; }
 [[ -z $EDITEUR ]] && { echo "Variable EDITEUR non assignée => sortie du script.";exit 1; }
 
+#
+# l'include de echos.sh est fait PLUS BAS car ses fonctions ont besoin de $LogFile, $FicMail et $FicMailWarning
+#
 
 function ENV_EchoVarWithComments
 {
@@ -37,6 +40,7 @@ function ENV_EchoVarWithComments
 function ENV_AfficheVariables
 {
 	#echo "${FUNCNAME[0]} : level ${#FUNCNAME[*]}";echo "${FUNCNAME[*]}"
+	fEchoVar "LANG"
 	fEcho
 	fEcho "-- AFFICHAGE DES VARIABLES SERVEUR ---------"
 	fEcho
@@ -122,7 +126,7 @@ mkdir -p $RUNDIR
 
 StdErrFile=$BASERUNDIR_SCRIPT_EDITEUR"/stderr.log" # fichier stderr créé par cron, ce fichier sera envoyé dans le mail final
 
-LogFile=$RUNDIR"/99_log"                # Nom du fichier de Log
+LogFile=$RUNDIR"/99_log"                 # Nom du fichier de Log
 > $LogFile
 FicMail=$RUNDIR"/99_Mail"                # Nom du fichier pour l'envoi du mail de rapport
 > $FicMail
@@ -168,8 +172,9 @@ Tiret="-"
 
 RepDerniereVersion=$RACINE"/DerniereVersion/"$EDITEUR   # Répertoire contenant la  dernière version des fichiers KBART
 RepArchive=$BASEARCHIVE"/"$EDITEUR   # Répertoire contenant les fichiers Archive des KBART
+RepDiff=$RACINE"/Diff/"$EDITEUR
 
-mkdir -p $RepDerniereVersion $RepArchive
+mkdir -p $RepDerniereVersion $RepArchive $RepDiff
 
 ###############################################################
 #

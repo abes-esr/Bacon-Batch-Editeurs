@@ -50,4 +50,5 @@ function KBFH_Run
   #[[ $rc -eq 0 ]] && KBFH_FindHeaderPatternAndExplain "$FirstLine"
 }
 
-KBFH_Run "/home/devel/MajEditeurs_ahe/rundir/CheckMajEditeurs_ahe/Autre/2024-07-21_23:00:01/03/harvest.aps.org_holdings_kbart.tsv"
+#KBFH_Run "/home/devel/MajEditeurs_ahe/rundir/CheckMajEditeurs_ahe/Autre/2024-07-21_23:00:01/03/harvest.aps.org_holdings_kbart.tsv"
+KBFH_Run "/home/devel/MajEditeurs_ahe/rundir/CheckMajEditeurs_ahe/Autre/2025-06-12_23:00:01/03/tls.search.proquest.com_titlelist_ListForward?format=kbart&ft=Y&citAbs=Y&other=Y&issn=Y&isbn=Y&peer=Y&pubId=Y&gaps=Y&subject=Y&language=Y&changes=Y&mprdId=1000001&productId=1000001:1007133:1007139&productName=ABI%2fINFORM%20Global.non_conforme"

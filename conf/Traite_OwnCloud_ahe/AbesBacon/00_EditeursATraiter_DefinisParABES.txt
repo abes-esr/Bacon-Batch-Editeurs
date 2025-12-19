@@ -1,3 +1,4 @@
+annualreviews
 BNF
 Brepols
 CAIRN
@@ -6,15 +7,20 @@ Couperin
 Cyberlibris
 dalloz
 Dawson
+degruyter
 droz
+duke
+ebsco
+elsevier
+emerald
 EDPSciences
 EmPremium
-EPISCIENCES
 erudit
 europresse
 Gallica
 garnier
 harmattan
+karger
 lavoisier
 LEH
 Lexbase
@@ -27,5 +33,9 @@ openedition
 OIE
 persee
 SPIE
+springer
 TechniquesIngenieur
+projecteuclid
 ProjectMuse
+rsc
+wiley

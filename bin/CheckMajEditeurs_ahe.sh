@@ -220,6 +220,8 @@ for (( cl=0;cl<$cLines;cl++ ))
   fEchof "2 ) Protection des espaces blancs : \" \"=32=\x20 ==> unicode zone privée panel 1 (E000 + 0020) = \u{E020}=\xee\x80\xa0 "
   LigneSansBlancs=$( sed -e "s/ /\xee\x80\xa0/g" <<<  "$LigneSansVides" )
 
+  #Editeur			NomFic1													URL ou fichier																						Extension	DateMajEditeur	NomFic2	ATraiterOuiNon
+  #openedition	OpenEdition_Global_AllJournals	openedition/OpenEdition_Global_AllJournals_2025-07-01.txt	.txt	2025-07-01		O
   read Editeur NomFic1 URL Extension DateMajEditeur NomFic2 ATraiterOuiNon <<< $LigneSansBlancs
   #echo $Editeur | hexdump -C
   Editeur=${Editeur//$'\xEE\x80\xA0'/ }
@@ -234,7 +236,7 @@ for (( cl=0;cl<$cLines;cl++ ))
 	TS_02_AtraiterOuiNon "$ATraiterOuiNon"
   if [[ $? -ne 0 ]]
    then
-    fEcho "Cette ligne n'est pas à traiter ==> Traitement partiel pour alimenter le fichier résultat HTML."
+    fEchof "Cette ligne n'est pas à traiter ==> Traitement partiel pour alimenter le fichier résultat HTML."
     TC_02_FichierNonATraiter "$cl"
     continue
    else
@@ -261,6 +263,7 @@ for (( cl=0;cl<$cLines;cl++ ))
 		fEcho
 		continue
 	fi
+
   #
 	###############################################################
 	# Traitement du nom du fichier ( on renomme les fichiers au standard Bacon )
@@ -318,8 +321,10 @@ for (( cl=0;cl<$cLines;cl++ ))
 	  V07_ResultatDaff_html_sansCaracteresSpeciaux=${RUNDIR}/07_Diff/${NomFic}_${V05_DateDernierTraitement}_${DateMajEditeur}_sansCaracteresSpeciaux.html
 	  V07_ResultatDaff_html_avecCaracteresSpeciaux=${RUNDIR}/07_Diff/${NomFic}_${V05_DateDernierTraitement}_${DateMajEditeur}_avecCaracteresSpeciaux.html
 	  V07_FichierHtmlDaffSurServeurWeb=${V07_RepServeurWeb}/${NomFic}_${V05_DateDernierTraitement}_${DateMajEditeur}.html
+	  V07_FichierHtmlDaff_copieDansDiff=${RepDiff}/${NomFic}_${V05_DateDernierTraitement}_${DateMajEditeur}.html
 	  VO8_FichierKBART_copieEnArchive=${RepArchive}/${NomFic}/${NomFic}_${DateMajEditeur}.tsv
     V08_ConservationDerniereVersion_FichierKBART=${RepDerniereVersion}/${NomFic1}_${DateMajEditeur}${NomFic2}.tsv
+    V08_SuppressionVersionsAnterieures_FichierKBART="${RepDerniereVersion}/${NomFic1}_*.tsv"
 
 		TC_07_Daff
 		if [[ $? -ne 0 ]]

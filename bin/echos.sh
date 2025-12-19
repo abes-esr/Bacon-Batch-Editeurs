@@ -66,8 +66,8 @@ function fEchoShell
 {
 	fEchoVar "BASH_SOURCE"
 	fEchoVar "BASH_COMMAND"
-	echo "taille de BASH_CMDS="${#BASH_CMDS[*]}  | tee -a $LogFile
-	echo "taille de FUNCNAME="${#FUNCNAME[*]}  | tee -a $LogFile
+	echo "taille de BASH_CMDS="${#BASH_CMDS[*]} | tee -a $LogFile
+	echo "taille de FUNCNAME="${#FUNCNAME[*]}   | tee -a $LogFile
 	for i in $( seq 1 ${#FUNCNAME[*]} )
 	 do
 	  let j=i-1

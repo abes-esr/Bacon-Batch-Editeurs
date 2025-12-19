@@ -1,10 +1,78 @@
-ACM:Export ACM books	ACM_GLOBAL_ALLEBOOKS	https://dl.acm.org/feeds/acm_kbart_books.txt	acm_kbart_books
-ACM:Export ACM periodicals/proceedings	ACM_COUPERIN_DIGITAL-LIBRARY	https://dl.acm.org/pb-assets/feeds/acm_kbart_periodicals_proceedings.txt	acm_kbart_periodicals_proceedings
-ACS:ACS All Publications Package	ACS_COUPERIN_ALLJOURNALS	https://solutions.acs.org/wp-content/uploads/2021/09/All-Publications-Collection-updated-monthly.txt	ACS_All-Publications-Collection-updated-monthly
-ACS:ACS eBooks Complete Collection	ACS_GLOBAL_ALLEBOOKS	https://solutions.acs.org/wp-content/uploads/eBooks-Complete-Collection-updated-monthly.txt	ACS_eBooks_Complete_Collection
-ACS:ACS Open Access Collecton	ACS_GLOBAL_OA-JOURNALS	https://pubs.acs.org/action/kbart?oa	achs_Openaccess_Titles_2024-09-01
-ACS:ACS Publications Full Portfolio	ACS_GLOBAL_ALLJOURNALS	https://solutions.acs.org/acs-kbart-files/	achs_Global_AllTitles_2024-09-01
 APS:Physical Review journal KBART file	APS_GLOBAL_ALLJOURNALS	https://harvest.aps.org/holdings/kbart.tsv	APS_AllTitles_2024_05_17
+ARTE:KBART Catalogue langue Française : Droit France	ARTE_COUPERIN_ARTE-CAMPUS-ALLTITLES	https://campusv2-frontapi.lab.arte.tv/api/content/program/listing/fr/FR/kbart.tsv	3e18c182-3259-4f5a-83fe-52792e291482
+BENTHAMSCIENCE:bentham journals	BENTHAMSCIENCE_GLOBAL_ALLJOURNALS	https://benthamdirect.com/openurl/kbart/journals	bentham_Global_AllJournals_2025-01-13
+BENTHAMSCIENCE:bentham books	BENTHAMSCIENCE_GLOBAL_ALLEBOOKS	https://benthamdirect.com/openurl/kbart/books	bentham_Global_AllBooks_2025-01-13
+BRILL:All Brill, Schöningh, Fink and mentis Titles	BRILL_GLOBAL_ALLEBOOKS	https://brill.com/fileasset/downloads_static/ebookkbart/Brill_Global_eBooks.txt	Brill_Global_eBooks
+CAIRN:Cairn_Global_Ouvrages_AllTitles (Master list Ouvrages)	CAIRN_GLOBAL_ALLEBOOKS	https://shs.cairn.info/kbart/ouvrages?free=1&pay=1	Cairn_Global_Ouvrages_AllTitles_2025-03-27
+CAIRN:Cairn_Global_Ouvrages_Libre_Accès (Ouvrages en libre accès)	CAIRN_GLOBAL_OPENACCESS-OUVRAGES	https://shs.cairn.info/kbart/ouvrages?free=1&pay=0	Cairn_Global_Ouvrages_Libre_Acces_2025-04-02
+CAIRN:Bouquet "Ouvrages - Général SHS"	CAIRN_GLOBAL_OUVRAGES-GENERALSHS	https://shs.cairn.info/kbart/ouvrages?free=0&pay=1&licence=86	Cairn_Global_Ouvrages-GeneralSHS_2025-03-27
+CAIRN:Bouquet "Ouvrages - Général STM"	CAIRN_GLOBAL_OUVRAGES-GENERALSTM	https://shs.cairn.info/kbart/ouvrages?free=0&pay=1&licence=1	Cairn_Global_Ouvrages-GeneralSTM_2025-03-27
+CAIRN:Bouquet "Ouvrages - Général Droit"	CAIRN_GLOBAL_OUVRAGES-GENERALDROIT	https://shs.cairn.info/kbart/ouvrages?free=0&pay=1&licence=1270	Cairn_Global_Ouvrages-GeneralDroit_2025-03-27
+CAIRN:Cairn_Global_AllJournals (Master list revues)	CAIRN_GLOBAL_ALLJOURNALS	https://shs.cairn.info/kbart/revues?free=1&pay=1	Cairn_Global_AllJournals_2025-04-02
+CAIRN:Cairn_Global_Revues_Accès_Gratuit_Intégral (Revues en libre accès/entièrement gratuites)	CAIRN_GLOBAL_REVUES-ACCESGRATUIT	https://shs.cairn.info/kbart/revues?free=1&pay=0&paywall=0	Cairn_Global_Revues_Acces_Gratuit_Integral_2025-04-02
+CAIRN:Cairn_Global_Revues_Contenus_Gratuits (Part de contenu librement accessible des revues)	CAIRN_GLOBAL_REVUES-CONTENUS-GRATUITS	https://shs.cairn.info/kbart/revues?free=1&pay=0	Cairn_Global_Revues_Contenus_Gratuits_2025-05-20
+CAIRN:Bouquet "Revues - Général Droit"	CAIRN_GLOBAL_REVUES-GENERALDROIT	https://shs.cairn.info/kbart/revues?free=0&pay=1&licence=1253	Cairn_Global_Revues-GeneralDroit_2025-04-02
+CAIRN:Bouquet "Revues - Général SHS"	CAIRN_GLOBAL_REVUES-GENERALSHS	https://shs.cairn.info/kbart/revues?free=0&pay=1&licence=2	Cairn_Global_Revues-GeneralSHS_2025-04-02
+CAIRN:Bouquet "Revues - Général STM"	CAIRN_GLOBAL_REVUES-GENERALSTM	https://shs.cairn.info/kbart/revues?free=0&pay=1&licence=1264	Cairn_Global_Revues-GeneralSTM_2025-04-02
+CAIRN:Bouquet "Revues - Affaires publiques"	CAIRN_GLOBAL_REVUES-AFFAIRESPUBLIQUES	https://shs.cairn.info/kbart/revues?free=0&pay=1&licence=230	Cairn_Global_Revues-Affairespubliques_2025-04-02
+CAIRN:Bouquet "Revues - Documentation hospitalière"	CAIRN_GLOBAL_REVUES-DOCUMENTATIONHOSPITALIERE	https://shs.cairn.info/kbart/revues?free=0&pay=1&licence=128	Cairn_Global_Revues-Documentationhospitaliere_2025-04-02
+CAIRN:Bouquet "Revues - Economie Gestion"	CAIRN_GLOBAL_REVUES-ECONOMIEGESTION	https://shs.cairn.info/kbart/revues?free=0&pay=1&licence=76	Cairn_Global_Revues-EconomieGestion_2025-04-02
+CAIRN:Bouquet "Revues - EcoSocPol"	CAIRN_GLOBAL_REVUES-ECOSOCPOL	https://shs.cairn.info/kbart/revues?free=0&pay=1&licence=11	Cairn_Global_Revues-EcoSocPol_2025-04-02
+CAIRN:Bouquet "Revues - Education"	CAIRN_GLOBAL_REVUES-EDUCATION	https://shs.cairn.info/kbart/revues?free=0&pay=1&licence=19	Cairn_Global_Revues-Education_2025-04-02
+CAIRN:Bouquet "Revues - Etudes Africaines"	CAIRN_GLOBAL_REVUES-ETUDESAFRICAINES	https://shs.cairn.info/kbart/revues?free=0&pay=1&licence=177	Cairn_Global_Revues-EtudesAfricaines_2025-04-02
+CAIRN:Bouquet "Revues - Géographie Environnement"	CAIRN_GLOBAL_REVUES-GEOGRAPHIEENVIRONNEMENT	https://shs.cairn.info/kbart/revues?free=0&pay=1&licence=172	Cairn_Global_Revues-GeographieEnvironnement_2025-04-02
+CAIRN:Bouquet "Revues - Humanités"	CAIRN_GLOBAL_REVUES-HUMANITES	https://shs.cairn.info/kbart/revues?free=0&pay=1&licence=43	Cairn_Global_Revues-Humanites_2025-04-02
+CAIRN:Bouquet "Revues - Humanities & Social Sciences"	CAIRN_GLOBAL_REVUES-SHS	https://shs.cairn.info/kbart/revues?free=0&pay=1&licence=36	Cairn_Global_Revues-Humanities&SocialSciences_2025-04-02
+CAIRN:Bouquet "Revues - Psychologie"	CAIRN_GLOBAL_REVUES-PSYCHOLOGIE	https://shs.cairn.info/kbart/revues?free=0&pay=1&licence=10	Cairn_Global_Revues-Psychologie_2025-04-02
+CAIRN:Bouquet "Revues - Santé publique"	CAIRN_GLOBAL_REVUES-SANTEPUBLIQUE	https://shs.cairn.info/kbart/revues?free=0&pay=1&licence=99	Cairn_Global_Revues-Santepublique_2025-04-02
+CAIRN:Bouquet "Revues - Théologie et études religieuses"	CAIRN_GLOBAL_REVUES-THEOLOGIEETETUDESRELIGIEUSES	https://shs.cairn.info/kbart/revues?free=0&pay=1&licence=867	Cairn_Global_Revues-Theologieetetudesreligieuses_2025-04-02
+CAIRN:Bouquet "Revues - Travail social"	CAIRN_GLOBAL_REVUES-TRAVAILSOCIAL	https://shs.cairn.info/kbart/revues?free=0&pay=1&licence=28	Cairn_Global_Revues-Travailsocial_2025-04-02
+CAIRN:Bouquet "Magazines - Général" (Master list Magazines)	CAIRN_GLOBAL_MAGAZINES-GENERAL	https://shs.cairn.info/kbart/magazines?free=0&pay=1&licence=56	Cairn_Global_Magazines-General_2025-04-02
+CAIRN:Bouquet "Ouvrages - Documentation hospitalière"	CAIRN_GLOBAL_OUVRAGES-DOCUMENTATIONHOSPITALIERE	https://shs.cairn.info/kbart/ouvrages?free=0&pay=1&licence=124	Cairn_Global_Ouvrages-Documentationhospitaliere_2025-04-02
+CAIRN:Bouquet "Ouvrages - Droit, Sciences Politiques"	CAIRN_GLOBAL_OUVRAGES-DROIT-SCIENCESPOLITIQUES	https://shs.cairn.info/kbart/ouvrages?free=0&pay=1&licence=118	Cairn_Global_Ouvrages-Droit,SciencesPolitiques_2025-04-02
+CAIRN:Bouquet "Ouvrages - Economie, Gestion, Finance"	CAIRN_GLOBAL_OUVRAGES-ECONOMIE-GESTION-FINANCE	https://shs.cairn.info/kbart/ouvrages?free=0&pay=1&licence=115	Cairn_Global_Ouvrages-Economie,Gestion,Finance_2025-04-02
+CAIRN:Bouquet "Ouvrages - EcoSocPol"	CAIRN_GLOBAL_OUVRAGES-ECOSOCPOL	https://shs.cairn.info/kbart/ouvrages?free=0&pay=1&licence=90	Cairn_Global_Ouvrages-EcoSocPol_2025-04-02
+CAIRN:Bouquet "Ouvrages - Éducation"	CAIRN_GLOBAL_OUVRAGES-EDUCATION	https://shs.cairn.info/kbart/ouvrages?free=0&pay=1&licence=89	Cairn_Global_Ouvrages-Education_2025-04-02
+CAIRN:Bouquet "Ouvrages - Géographie, Environnement"	CAIRN_GLOBAL_OUVRAGES-GEOGRAPHIE-ENVIRONNEMENT	https://shs.cairn.info/kbart/ouvrages?free=0&pay=1&licence=160	Cairn_Global_Ouvrages-Geographie,Environnement_2025-04-02
+CAIRN:Bouquet "Ouvrages - Histoire, Géographie"	CAIRN_GLOBAL_OUVRAGES-HISTOIRE-GEOGRAPHIE	https://shs.cairn.info/kbart/ouvrages?free=0&pay=1&licence=117	Cairn_Global_Ouvrages-Histoire,Geographie_2025-04-02
+CAIRN:Bouquet "Ouvrages - Humanités"	CAIRN_GLOBAL_OUVRAGES-HUMANITES	https://shs.cairn.info/kbart/ouvrages?free=0&pay=1&licence=88	Cairn_Global_Ouvrages-Humanites_2025-04-02
+CAIRN:Bouquet "Ouvrages - Lettres, Linguistique"	CAIRN_GLOBAL_OUVRAGES-LETTRES-LINGUISTIQUE	https://shs.cairn.info/kbart/ouvrages?free=0&pay=1&licence=123	Cairn_Global_Ouvrages-Lettres,Linguistique_2025-04-02
+CAIRN:Bouquet "Ouvrages - Philosophie, Religions"	CAIRN_GLOBAL_OUVRAGES-PHILOSOPHIE-RELIGIONS	https://shs.cairn.info/kbart/ouvrages?free=0&pay=1&licence=122	Cairn_Global_Ouvrages-Philosophie,Religions_2025-04-02
+CAIRN:Bouquet "Ouvrages - Psychanalyse"	CAIRN_GLOBAL_OUVRAGES-PSYCHANALYSE	https://shs.cairn.info/kbart/ouvrages?free=0&pay=1&licence=121	Cairn_Global_Ouvrages-Psychanalyse_2025-04-02
+CAIRN:Bouquet "Ouvrages - Psychologie"	CAIRN_GLOBAL_OUVRAGES-PSYCHOLOGIE	https://shs.cairn.info/kbart/ouvrages?free=0&pay=1&licence=87	Cairn_Global_Ouvrages-Psychologie_2025-04-02
+CAIRN:Bouquet "Ouvrages - Psychologie de l'enfant et de l'adolesc"	CAIRN_GLOBAL_OUVRAGES-PSYCHOLOGIEDELENFANTETDELADOLESCENT	https://shs.cairn.info/kbart/ouvrages?free=0&pay=1&licence=138	Cairn_Global_Ouvrages-Psychologiedel'enfantetdel'adolesc_2025-04-02
+CAIRN:Bouquet "Ouvrages - Santé mentale et handicap"	CAIRN_GLOBAL_OUVRAGES-SANTEMENTALEETHANDICAP	https://shs.cairn.info/kbart/ouvrages?free=0&pay=1&licence=120	Cairn_Global_Ouvrages-Santementaleethandicap_2025-04-02
+CAIRN:Bouquet "Ouvrages - Santé publique"	CAIRN_GLOBAL_OUVRAGES-SANTEPUBLIQUE	https://shs.cairn.info/kbart/ouvrages?free=0&pay=1&licence=152	Cairn_Global_Ouvrages-Santepublique_2025-04-02
+CAIRN:Bouquet "Ouvrages - Sociologie, Ethnologie, Démographie"	CAIRN_GLOBAL_OUVRAGES-SOCIOLOGIE-ETHNOLOGIE-DEMOGRAPHIE	https://shs.cairn.info/kbart/ouvrages?free=0&pay=1&licence=116	Cairn_Global_Ouvrages-Sociologie,Ethnologie,Demographie_2025-04-02
+CAIRN:Bouquet "Ouvrages - Travail social"	CAIRN_GLOBAL_OUVRAGES-TRAVAILSOCIAL	https://shs.cairn.info/kbart/ouvrages?free=0&pay=1&licence=101	Cairn_Global_Ouvrages-Travailsocial_2025-04-02
+CAIRN:Bouquet "Poches-Général"	CAIRN_GLOBAL_POCHES-GENERAL	https://shs.cairn.info/kbart/poches?free=0&pay=1&licence=72	Cairn_Global_Poches-General_2025-04-02
+CAIRN:Bouquet "Poches - Que sais-je"	CAIRN_GLOBAL_POCHES-QUESAIS-JE	https://shs.cairn.info/kbart/poches?free=0&pay=1&licence=52	Cairn_Global_Poches-Quesais-je_2025-04-02
+CAIRN:Bouquet "Poches - Repères"	CAIRN_GLOBAL_POCHES-REPERES	https://shs.cairn.info/kbart/poches?free=0&pay=1&licence=73	Cairn_Global_Poches-Reperes_2025-04-02
+CAIRN:Bouquet "Poches - Droit, Sciences Politiques"	CAIRN_GLOBAL_POCHES-DROIT-SCIENCESPOLITIQUES	https://shs.cairn.info/kbart/poches?free=0&pay=1&licence=59	Cairn_Global_Poches-Droit,SciencesPolitiques_2025-04-02
+CAIRN:Bouquet "Poches - Economie, gestion"	CAIRN_GLOBAL_POCHES-ECONOMIE-GESTION	https://shs.cairn.info/kbart/poches?free=0&pay=1&licence=54	Cairn_Global_Poches-Economie,gestion_2025-04-02
+CAIRN:Bouquet "Poches - Education"	CAIRN_GLOBAL_POCHES-EDUCATION	https://shs.cairn.info/kbart/poches?free=0&pay=1&licence=889	Cairn_Global_Poches-Education_2025-04-02
+CAIRN:Bouquet "Poches - Histoire"	CAIRN_GLOBAL_POCHES-HISTOIRE	https://shs.cairn.info/kbart/poches?free=0&pay=1&licence=65	Cairn_Global_Poches-Histoire_2025-04-02
+CAIRN:Bouquet "Poches - Lettres"	CAIRN_GLOBAL_POCHES-LETTRES	https://shs.cairn.info/kbart/poches?free=0&pay=1&licence=64	Cairn_Global_Poches-Lettres_2025-04-02
+CAIRN:Bouquet "Poches - Philosophie"	CAIRN_GLOBAL_POCHES-PHILOSOPHIE	https://shs.cairn.info/kbart/poches?free=0&pay=1&licence=63	Cairn_Global_Poches-Philosophie_2025-04-02
+CAIRN:Bouquet "Poches - Psychologie"	CAIRN_GLOBAL_POCHES-PSYCHOLOGIE	https://shs.cairn.info/kbart/poches?free=0&pay=1&licence=62	Cairn_Global_Poches-Psychologie_2025-04-02
+CAIRN:Bouquet "Poches - Sciences et tech"	CAIRN_GLOBAL_POCHES-SCIENCESETTECH	https://shs.cairn.info/kbart/poches?free=0&pay=1&licence=53	Cairn_Global_Poches-Sciencesettech_2025-04-02
+CAIRN:Bouquet "Poches - Sociologie"	CAIRN_GLOBAL_POCHES-SOCIOLOGIE	https://shs.cairn.info/kbart/poches?free=0&pay=1&licence=60	Cairn_Global_Poches-Sociologie_2025-04-02
+CAIRN:Bouquet "Poches - Travail Social"	CAIRN_GLOBAL_POCHES-TRAVAILSOCIAL	https://shs.cairn.info/kbart/poches?free=0&pay=1&licence=130	Cairn_Global_Poches-TravailSocial_2025-04-02
+CUP:CCO	CUP_GLOBAL_CCO	https://www.cambridge.org/core/services/aop-cambridge-core/kbart/create/bespoke/0FA3FCA4468F7A8E15F0414727CCE50F	CUP_Cambridge_Companions_Online
+CUP:CHO	CUP_GLOBAL_CHO	https://www.cambridge.org/core/services/aop-cambridge-core/kbart/create/bespoke/E4BD8AB89BF46D463F219E9EEED3A62E	CUP_Cambridge_Histories_Online
+CUP:Cambridge eBooks All Books	CUP_GLOBAL_ALLEBOOKS	https://www.cambridge.org/core/services/aop-cambridge-core/kbart/create/bespoke/8C5D6D9B701663C0B1B8F2556DE6AC2E	CUP_Cambridge_eBooks_All_Books
+CUP:Cambridge Journals 2025 Full Collection	CUP_COUPERIN_ALLJOURNALS	https://www.cambridge.org/core/services/aop-file-manager/file/673b8df37f12e611069392fa/Cambridge-Journals-2025-Full-Collection.txt	Cambridge-Journals-2025-Full-Collection
+CUP:Cambridge-Journals-All-Gold-Open-Access-Journals	CUP_GLOBAL_OA-JOURNALS	https://www.cambridge.org/core/services/aop-file-manager/file/67a1006e4ad3f682f1357c7d/2025CambridgeJournalsAllGoldOpenAccessJournals.txt	2025-Cambridge-Journals-All-Gold-Open-Access-Journals
+ELSEVIER:BMF	ELSEVIER_COUPERIN_BIBLIOTHEQUE-MEDICALE-FRANCAISE	https://holdings.sciencedirect.com/holdings/productReport.url?packageId=38190&productId=34	ScienceDirectStandard_Global_ElsevierMassonFrenchLanguageTitles
+ELSEVIER:CFC	ELSEVIER_COUPERIN_COMPLETE-FREEDOM-COLLECTION	http://holdings.sciencedirect.com/holdings/productReport.url?packageId=18048&productId=34	ScienceDirectStandard_Global_CompleteFreedomCollection
+ELSEVIER:CP	ELSEVIER_COUPERIN_CELLPRESS	https://holdings.sciencedirect.com/holdings/productReport.url?packageId=7426&productId=34	ScienceDirectStandard_Global_CellPressCollection
+ELSEVIER:ScienceDirect All Titles	ELSEVIER_GLOBAL_SCIENCEDIRECT-ALLTITLES	https://holdings.sciencedirect.com/holdings/productReport.url?packageId=&productId=34	ScienceDirectStandard_Global_AllTitles
+EMS:Books KBART	EMS_GLOBAL_ALLEBOOKS	https://ems.press/files/standalone/metadata/books/kbart/EMSPress_Global_AllBooks.txt	EMSPress_Global_AllBooks
+EMS:Journals KBART	EMS_GLOBAL_ALLJOURNALS	https://ems.press/files/standalone/metadata/journals/kbart/EMSPress_Global_AllJournals.txt	EMSPress_Global_AllJournals
+ENI:Eni KBART	ENI_GLOBAL_ALLTITLES	https://download.mediapluspro.com/BN/FR/current/Kbart/kbart.csv	ENI_kbart
+HARMATTAN:L'Harmattan Harmathèque Allebooks	HARMATTAN_GLOBAL_HARMATHEQUE-ALLEBOOKS	https://www.editions-harmattan.fr/_uploads/harmatheque_Global_AllEbooks_kbart.txt	harmatheque_Global_AllEbooks_kbart
+IOP:Download All records (txt)	IOP_GLOBAL_ALLEBOOKS	https://cms.iopscience.org/2c221352-0a1a-11eb-8f02-fd3098ce0def/ioppublishing_all_collections_combined_releases_all_records.txt?guest=true	ioppublishing_all_collections_combined_releases_all_records
+JSTOR:All Title List	JSTOR_COUPERIN_ALLJOURNALS	https://www.jstor.org/kbart/collections/all-archive-titles?contentType=journals	JSTOR_Global_AllArchiveTitles_2025-01-30
 JSTOR:Arts & Sciences I	JSTOR_COUPERIN_ARTS-AND-SCIENCES-I	https://www.jstor.org/kbart/collections/as	JSTOR_Global_Arts&SciencesICollection_2023-02-17
 JSTOR:Arts & Sciences II	JSTOR_COUPERIN_ARTS-AND-SCIENCES-II	https://www.jstor.org/kbart/collections/asii	JSTOR_Global_Arts&SciencesIICollection_2023-02-17
 JSTOR:Arts & Sciences III	JSTOR_COUPERIN_ARTS-AND-SCIENCES-III	https://www.jstor.org/kbart/collections/asiii	JSTOR_Global_Arts&SciencesIIICollection_2023-02-17
@@ -22,58 +90,56 @@ JSTOR:Arts & Sciences XIII	JSTOR_COUPERIN_ARTS-AND-SCIENCES-XIII	https://www.jst
 JSTOR:Arts & Sciences XIV	JSTOR_COUPERIN_ARTS-AND-SCIENCES-XIV	https://www.jstor.org/kbart/collections/asxiv	JSTOR_Global_Arts&SciencesXIVCollection_2023-02-17
 JSTOR:Arts & Sciences XV	JSTOR_COUPERIN_ARTS-AND-SCIENCES-XV	https://www.jstor.org/kbart/collections/asxv-backfile-collection	JSTOR_Global_Arts&SciencesXVCollection_2023-02-17
 JSTOR:Asia	JSTOR_COUPERIN_ASIA	https://www.jstor.org/kbart/collections/asia-backfile-collection	JSTOR_Global_AsiaCollection_2023-02-17
-BRILL:All Brill, Schöningh, Fink and mentis Titles	BRILL_GLOBAL_ALLEBOOKS	https://brill.com/fileasset/downloads_static/ebookkbart/Brill_Global_eBooks.txt	Brill_Global_eBooks
 JSTOR:Biological Sciences	JSTOR_COUPERIN_BIOLOGICAL-SCIENCES	https://www.jstor.org/kbart/collections/biosci	JSTOR_Global_BiologicalSciencesCollection_2023-02-17
+JSTOR:Books at JSTOR: Open Access Title List	JSTOR_GLOBAL_OA-EBOOKS	https://www.jstor.org/kbart/collections/oa-book-titles	JSTOR_Global_OpenAccessBookTitles_2025-02-18
 JSTOR:Business & Economics	JSTOR_COUPERIN_BUSINESS-AND-ECONOMICS	https://www.jstor.org/kbart/collections/businesseconomics	JSTOR_Global_Business&EconomicsCollection_2023-02-17
 JSTOR:Business I	JSTOR_COUPERIN_BUSINESS-I	https://www.jstor.org/kbart/collections/bus	JSTOR_Global_BusinessICollection_2023-02-17
 JSTOR:Business II	JSTOR_COUPERIN_BUSINESS-II	https://www.jstor.org/kbart/collections/busii	JSTOR_Global_BusinessIICollection_2023-02-17
 JSTOR:Business III	JSTOR_COUPERIN_BUSINESS-III	https://www.jstor.org/kbart/collections/busiii	JSTOR_Global_BusinessIIICollection_2023-02-17
 JSTOR:Business IV	JSTOR_COUPERIN_BUSINESS-IV	https://www.jstor.org/kbart/collections/busiv	JSTOR_Global_BusinessIVCollection_2023-02-17
-CUP:CCO	CUP_GLOBAL_CCO	https://www.cambridge.org/core/services/aop-cambridge-core/kbart/create/bespoke/0FA3FCA4468F7A8E15F0414727CCE50F	CUP_Cambridge_Companions_Online
-CUP:CHO	CUP_GLOBAL_CHO	https://www.cambridge.org/core/services/aop-cambridge-core/kbart/create/bespoke/E4BD8AB89BF46D463F219E9EEED3A62E	CUP_Cambridge_Histories_Online
-CUP:Cambridge eBooks All Books	CUP_GLOBAL_ALLEBOOKS	https://www.cambridge.org/core/services/aop-cambridge-core/kbart/create/bespoke/8C5D6D9B701663C0B1B8F2556DE6AC2E	CUP_Cambridge_eBooks_All_Books
-CUP:Cambridge Journals 2024 Full Collection	CUP_COUPERIN_ALLJOURNALS	https://www.cambridge.org/core/services/aop-file-manager/file/652702a7080b4a3a61221ab2	Cambridge-Journals-2024-Full-Collection
-CUP:Cambridge-Journals-All-Gold-Open-Access-Journals	CUP_GLOBAL_OA-JOURNALS	https://www.cambridge.org/core/services/aop-file-manager/file/64553a61ac56ca63eba2589b/2024-Cambridge-Journals-All-Gold-Open-Access-Journals.txt	2024-Cambridge-Journals-All-Gold-Open-Access-Journals
-ELSEVIER:BMF	ELSEVIER_COUPERIN_BIBLIOTHEQUE-MEDICALE-FRANCAISE	https://holdings.sciencedirect.com/holdings/productReport.url?packageId=38190&productId=34	ScienceDirectStandard_Global_ElsevierMassonFrenchLanguageTitles
-ELSEVIER:CFC	ELSEVIER_COUPERIN_COMPLETE-FREEDOM-COLLECTION	http://holdings.sciencedirect.com/holdings/productReport.url?packageId=18048&productId=34	ScienceDirectStandard_Global_CompleteFreedomCollection
-ELSEVIER:CP	ELSEVIER_COUPERIN_CELLPRESS	https://holdings.sciencedirect.com/holdings/productReport.url?packageId=7426&productId=34	ScienceDirectStandard_Global_CellPressCollection
-ELSEVIER:ScienceDirect All Titles	ELSEVIER_GLOBAL_SCIENCEDIRECT-ALLTITLES	https://holdings.sciencedirect.com/holdings/productReport.url?packageId=&productId=34&downloadId=1717426460245	ScienceDirectStandard_Global_AllTitles
-EMS:Books KBART	EMS_GLOBAL_ALLEBOOKS	https://ems.press/files/standalone/metadata/books/kbart/EMSPress_Global_AllBooks.txt	EMSPress_Global_AllBooks
-EMS:Journals KBART	EMS_GLOBAL_ALLJOURNALS	https://ems.press/files/standalone/metadata/journals/kbart/EMSPress_Global_AllJournals.txt	EMSPress_Global_AllJournals
-ENI:Eni KBART	ENI_GLOBAL_ALLTITLES	http://download.mediapluspro.com/BN/FR/current/Kbart/kbart.csv	kbart
 JSTOR:Ecology & Botany I	JSTOR_COUPERIN_ECOLOGY-AND-BOTANY-I	https://www.jstor.org/kbart/collections/eb	JSTOR_Global_Ecology&BotanyICollection_2023-02-17
 JSTOR:Essential	JSTOR_COUPERIN_ESSENTIAL	https://www.jstor.org/kbart/collections/jstoressential	JSTOR_Global_JSTOREssentialCollection_2023-02-21
-HARMATTAN:L'Harmattan Harmathèque Allebooks	HARMATTAN_GLOBAL_HARMATHEQUE-ALLEBOOKS	https://www.editions-harmattan.fr/_uploads/harmatheque_Global_AllEbooks_kbart.txt	harmatheque_Global_AllEbooks_kbart
 JSTOR:Health & General Sciences	JSTOR_COUPERIN_HEALTH-AND-GENERAL-SCIENCES	https://www.jstor.org/kbart/collections/gs	JSTOR_Global_Health&GeneralSciencesCollection_2023-02-17
 JSTOR:Hebrew Journals	JSTOR_COUPERIN_HEBREW	https://www.jstor.org/kbart/collections/hebrewjournals	JSTOR_Global_HebrewJournalsCollection_2023-02-17
-IOP:Download All records (txt)	IOP_GLOBAL_ALLEBOOKS	https://cms.iopscience.org/2c221352-0a1a-11eb-8f02-fd3098ce0def/ioppublishing_all_collections_combined_releases_all_records.txt?guest=true	ioppublishing_all_collections_combined_releases_all_records
 JSTOR:Iberoamerica	JSTOR_COUPERIN_IBEROAMERICA	https://www.jstor.org/kbart/collections/jstoriberoamerica	JSTOR_Global_IberoamericaCollection_2023-02-17
 JSTOR:Ireland	JSTOR_COUPERIN_IRELAND	https://www.jstor.org/kbart/collections/ireland	JSTOR_Global_IrelandCollection_2023-02-27
-JSTOR:JSTOR Security Studies (journal titles only- not a separate collection)	JSTOR_COUPERIN_SECURITY-STUDIES-JOURNALS-ONLY	https://www.jstor.org/kbart/collections/securitystudies-backfile-collection?contentType=journals	JSTOR_Global_SecurityStudies_Journals_2023-02-27
-JSTOR:JSTOR Security Studies (journals and research reports)	JSTOR_COUPERIN_SECURITY-STUDIES	https://www.jstor.org/kbart/collections/securitystudies-backfile-collection	JSTOR_Global_SecurityStudies_2023-02-27
-JSTOR:JSTOR Security Studies (research report titles only - not a separate collection)	JSTOR_COUPERIN_SECURITY-STUDIES-RESEARCH-REPORTS-ONLY	https://www.jstor.org/kbart/collections/securitystudies-backfile-collection?contentType=research_reports	JSTOR_Global_SecurityStudies_ResearchReports_2023-02-27
-JSTOR:JSTOR Sustainability (journals and research reports)	JSTOR_COUPERIN_SUSTAINABILITY	https://www.jstor.org/kbart/collections/sustainability-backfile-collection	JSTOR_Global_Sustainability_2023-02-27
-JSTOR:JSTOR Sustainability (journals titles only - not a separate collection)	JSTOR_COUPERIN_SUSTAINABILITY-JOURNALS-ONLY	https://www.jstor.org/kbart/collections/sustainability-backfile-collection?contentType=journals	JSTOR_Global_SustainabilityCollection_Journals_2023-02-27
-JSTOR:JSTOR Sustainability (research report titles only - not a separate collection)	JSTOR_COUPERIN_SUSTAINABILITY-RESEARCH-REPORTS-ONLY	https://www.jstor.org/kbart/collections/sustainability-backfile-collection?contentType=research_reports	JSTOR_Global_SustainabilityCollection_ResearchReports_2023-02-27
 JSTOR:Books at JSTOR: All Books Title List	JSTOR_GLOBAL_ALLEBOOKS	https://www.jstor.org/kbart/collections/all-book-titles	JSTOR_Global_AllBookTitles_2022-08-29
 JSTOR:Open Access Journals Title List	JSTOR_GLOBAL_OA-JOURNALS	https://www.jstor.org/kbart/collections/oa-journal-titles	JSTOR_Global_OpenAccessJournalTitles_2022-08-29
 JSTOR:Jewish Studies	JSTOR_COUPERIN_JEWISH-STUDIES	https://www.jstor.org/kbart/collections/jewishstudies-backfile-collection	JSTOR_Global_JewishStudies_2023-02-17
-APS:KBART File	APS_COUPERIN_ALLJOURNALS	https://harvest.aps.org/holdings/kbart.tsv	APS_AllTitles_2023_04_24
 JSTOR:Language & Literature	JSTOR_COUPERIN_LANGUAGE-AND-LITERATURE	https://www.jstor.org/kbart/collections/langlit	JSTOR_Global_Language&LiteratureCollection_2023-02-21
 JSTOR:Life Sciences	JSTOR_COUPERIN_LIFE-SCIENCES	https://www.jstor.org/kbart/collections/lifesci	JSTOR_Global_LifeSciencesCollection_2023-02-21
 JSTOR:Lives of Literature Collection	JSTOR_COUPERIN_LIVES-OF-LITERATURE	https://www.jstor.org/kbart/collections/livesoflit-backfile-collection	JSTOR_Global_LivesofLiterature_2023-02-27
-MATHDOC:Mathdoc Global Mersenne	MATHDOC_GLOBAL_MERSENNE	https://alco.centre-mersenne.org/kbart/export/	Mathdoc_Global_Mersenne
-MATHDOC:Mathdoc Global Numdam	MATHDOC_GLOBAL_NUMDAM	http://www.numdam.org/kbart/export	Mathdoc_Global_Numdam
+JSTOR:Lives of Literature Extension	JSTOR_COUPERIN_LIVES-OF-LITERATURE-EXTENSION	https://www.jstor.org/kbart/collections/livesoflitext-backfile-collection	JSTOR_Global_LivesofLiteratureExtension_2025-01-30
 JSTOR:Mathematics & Statistics	JSTOR_COUPERIN_MATHEMATICS-AND-STATISTICS	https://www.jstor.org/kbart/collections/mathstat	JSTOR_Global_Mathematics&StatisticsCollection_2023-02-21
 JSTOR:Mathematics & Statistics Legacy	JSTOR_COUPERIN_MATHEMATICS-AND-STATISTICS-LEGACY	https://www.jstor.org/kbart/collections/mathstat-legacy-backfile-collection	JSTOR_Global_Mathematics&StatisticsLegacyCollection_2023-02-21
-JSTOR:Museums Collection	JSTOR_COUPERIN_MUSEUMS	https://www.jstor.org/kbart/collections/mus-backfile-collection	JSTOR_Global_MuseumsCollection_2023-02-27
+JSTOR:Museums Collection	JSTOR_COUPERIN_MUSEUMS	https://www.jstor.org/kbart/collections/mus-backfile-collection?contentType=journals	JSTOR_Global_MuseumsCollection_2023-02-27
 JSTOR:Music	JSTOR_COUPERIN_MUSIC	https://www.jstor.org/kbart/collections/music-backfile-collection	JSTOR_Global_MusicCollection_2023-02-21
 JSTOR:Music Legacy	JSTOR_COUPERIN_MUSIC-LEGACY	https://www.jstor.org/kbart/collections/music-legacy-backfile-collection	JSTOR_Global_MusicLegacyCollection_2023-02-21
-OBP:Open Book Publishers catalogue	OBP_GLOBAL_ALLEBOOKS	http://export.thoth.pub/specifications/kbart::oclc/publisher/85fd969a-a16c-480b-b641-cb9adf979c3b	kbart__oclc__85fd969a-a16c-480b-b641-cb9adf979c3b
-PROJECTMUSE:Project Muse Open Access Books	PROJECTMUSE_GLOBAL_OA-EBOOKS	https://about.muse.jhu.edu/lib/metadata?format=kbart&content=book&include=oa&filename=open_access_books&no_auth=1	open_access_books
-PROJECTMUSE:Project Muse Open Access Journals	PROJECTMUSE_GLOBAL_OA-JOURNALS	https://about.muse.jhu.edu/lib/metadata?format=kbart&content=journal&include=oa&filename=open_access_journals&no_auth=1	open_access_journals
+JSTOR:Religion & Theology	JSTOR_COUPERIN_RELIGION-AND-THEOLOGY	https://www.jstor.org/kbart/collections/relitheo	JSTOR_Global_Religion&TheologyCollection_2023-02-20
+JSTOR:Public Health	JSTOR_COUPERIN_PUBLIC-HEALTH	https://www.jstor.org/kbart/collections/publichealth-backfile-collection?fileFormat=text&contentType=journals	JSTOR_Global_publichealth-backfile-collection_2025-01-30
+JSTOR:Secondary Schools Collection	JSTOR_COUPERIN_SECONDARY-SCHOOLS	https://www.jstor.org/kbart/collections/secschool-backfile-collection?contentType=journals	JSTOR_Global_SecondarySchoolsCollection_2025-02-10
+JSTOR:JSTOR Security Studies	JSTOR_COUPERIN_SECURITY-STUDIES-JOURNALS-ONLY	https://www.jstor.org/kbart/collections/securitystudies-backfile-collection?contentType=journals	JSTOR_Global_SecurityStudies_2025-01-30
+JSTOR:JSTOR Security Studies Extension	JSTOR_COUPERIN_SECURITY-STUDIES-EXTENSION	https://www.jstor.org/kbart/collections/securitystudiesextension-backfile-collection	JSTOR_Global_SecurityStudiesExtension_2025-01-30
+JSTOR:JSTOR Sustainability (journals titles only - not a separate collection)	JSTOR_COUPERIN_SUSTAINABILITY-JOURNALS-ONLY	https://www.jstor.org/kbart/collections/sustainability-backfile-collection?contentType=journals	JSTOR_Global_SustainabilityCollection_Journals_2025-01-30
+JSTOR:JSTOR Sustainability Extension	JSTOR_COUPERIN_SUSTAINABILITY-EXTENSION	https://www.jstor.org/kbart/collections/sustainabilityextension-backfile-collection	JSTOR_Global_SustainabilityExtension_2025-01-30
+JSTOR:JSTOR Security Studies (Research Reports)	JSTOR_GLOBAL_SECURITY-STUDIES-RESEARCH-REPORTS-ONLY	https://www.jstor.org/kbart/collections/securitystudies-backfile-collection?contentType=research_reports	JSTOR_Global_SecurityStudies_ResearchReports_2025-01-30
+JSTOR:JSTOR Sustainability (Research Reports)	JSTOR_GLOBAL_SUSTAINABILITY-RESEARCH-REPORTS-ONLY	https://www.jstor.org/kbart/collections/sustainability-backfile-collection?contentType=research_reports	JSTOR_Global_SustainabilityCollection_ResearchReports_2025-01-30
+MATHDOC:Mathdoc Global Mersenne	MATHDOC_GLOBAL_MERSENNE	https://alco.centre-mersenne.org/kbart/export/	Mathdoc_Global_Mersenne
+MATHDOC:Mathdoc Global Numdam	MATHDOC_GLOBAL_NUMDAM	http://www.numdam.org/kbart/export	Mathdoc_Global_Numdam
+OBP:Open Book Publishers catalogue	OBP_GLOBAL_ALLEBOOKS	http://export.thoth.pub/specifications/kbart::oclc/publisher/85fd969a-a16c-480b-b641-cb9adf979c3b	OBP_kbart
+PROJECTMUSE:Project Muse Open Access Books	PROJECTMUSE_GLOBAL_OA-EBOOKS	https://about.muse.jhu.edu/lib/metadata?format=kbart&content=book&include=oa&filename=open_access_books&no_auth=1	projectmuse_open_access_books
+PROJECTMUSE:Project Muse Open Access Journals	PROJECTMUSE_GLOBAL_OA-JOURNALS	https://about.muse.jhu.edu/lib/metadata?format=kbart&content=journal&include=oa&filename=open_access_journals&no_auth=1	projectmuse_open_access_journals
 PROJECTMUSE:Universal books	PROJECTMUSE_GLOBAL_ALLEBOOKS	https://about.muse.jhu.edu/lib/metadata?no_auth=1&format=kbart&content=book&collection_ids=1886	project_muse_kbart-ebooks
 PROJECTMUSE:Universal journals	PROJECTMUSE_GLOBAL_ALLJOURNALS	https://about.muse.jhu.edu/lib/metadata?no_auth=1&format=kbart&content=journal&collection_ids=1887	project_muse_kbart-journals
-JSTOR:Religion & Theology	JSTOR_COUPERIN_RELIGION-AND-THEOLOGY	https://www.jstor.org/kbart/collections/relitheo	JSTOR_Global_Religion&TheologyCollection_2023-02-20
+PROQUEST:ABI INFORM Collection	PROQUEST_COUPERIN_ABI-INFORM-COLLECTION	http://tls.search.proquest.com/titlelist/ListForward?format=kbart&ft=Y&citAbs=Y&other=Y&issn=Y&isbn=Y&peer=Y&pubId=Y&gaps=Y&subject=Y&language=Y&changes=Y&mprdId=10000008&productId=1000001:1007133:1007139&productName=ABI%2fINFORM%20Collection	ProQuest_Global_ABIINFORM_Collection_10000008_2024-10-14
+PROQUEST:ABI INFORM Global	PROQUEST_COUPERIN_ABI-INFORM-GLOBAL	http://tls.search.proquest.com/titlelist/ListForward?format=kbart&ft=Y&citAbs=Y&other=Y&issn=Y&isbn=Y&peer=Y&pubId=Y&gaps=Y&subject=Y&language=Y&changes=Y&mprdId=1000001&productId=1000001:1007133:1007139&productName=ABI%2fINFORM%20Global	ProQuest_Global_ABIINFORM_Global_1000001_2024-10-24
+PROQUEST:Accounting Tax & Banking	PROQUEST_GLOBAL_ACCOUNTING-TAX-AND-BANKING-COLLECTION	http://tls.search.proquest.com/titlelist/ListForward?format=kbart&ft=Y&citAbs=Y&other=Y&issn=Y&isbn=Y&peer=Y&pubId=Y&gaps=Y&subject=Y&language=Y&changes=Y&mprdId=10000231&productId=1006323:1006324&productName=Accounting,%20Tax%20%26%20Banking%20Collection	ProQuest_Global_Accounting_Tax_&_Banking_Collection_10000231_2025-02-18
+PROQUEST:Asian & Europea Business Collection	PROQUEST_GLOBAL_ASIAN-AND-EUROPEAN-BUSINESS-COLLECTION	http://tls.search.proquest.com/titlelist/ListForward?format=kbart&ft=Y&citAbs=Y&other=Y&issn=Y&isbn=Y&peer=Y&pubId=Y&gaps=Y&subject=Y&language=Y&changes=Y&mprdId=10000236&productId=1006102:1006985&productName=Asian%20%26%20European%20Business%20Collection	ProQuest_Global_Asian_&_European_Business_Collection_10000236_2025-02-18
+PROQUEST:Business Market Research collection	PROQUEST_GLOBAL_BUSINESS-MARKET-RESEARCH-COLLECTION	http://tls.search.proquest.com/titlelist/ListForward?format=kbart&ft=Y&citAbs=Y&other=Y&issn=Y&isbn=Y&peer=Y&pubId=Y&gaps=Y&subject=Y&language=Y&changes=Y&mprdId=10000239&productId=1007261:1009188&productName=Business%20Market%20Research%20Collection	ProQuest_Global_Business_Market_Research_Collection_10000239_2025-02-18
+PROQUEST:ProQuest One Business	PROQUEST_COUPERIN_ONE-BUSINESS	http://tls.search.proquest.com/titlelist/ListForward?format=kbart&ft=Y&citAbs=Y&other=Y&issn=Y&isbn=Y&peer=Y&pubId=Y&gaps=Y&subject=Y&language=Y&changes=Y&mprdId=10000369&productId=1009404:1009924&productName=ProQuest%20One%20Business	ProQuest_Global_ProQuest_One_Business_10000369_2024-10-10
+TAYLORANDFRANCIS:Content Packages	TAYLORANDFRANCIS_GLOBAL_ALLJOURNALS	https://www.tandfonline.com/action/kbart	tandf_Global_AllTitles_2025-07-20
+TAYLORANDFRANCIS:Taylor & Francis Open Access	TAYLORANDFRANCIS_GLOBAL_OPENACCESS	https://www.tandfonline.com/action/contentHoldings?code=TF_Open	TaylorandFrancisOnline_Global_TaylorandFrancisOpen_2025-07-23
+TAYLORANDFRANCIS:Taylor & Francis Social Science & Humanities Library 2025	TAYLORANDFRANCIS_COUPERIN_SSH-LIBRARY-JOURNALS	https://www.tandfonline.com/action/contentHoldings?code=JCSHPF_N_2025_000	TaylorandFrancisOnline_Global_TandFSSHLibrary2025_2025-12-12
+TAYLORANDFRANCIS:Taylor & Francis Science & Technology Library 2025	TAYLORANDFRANCIS_COUPERIN_ST-LIBRARY-JOURNALS	https://www.tandfonline.com/action/contentHoldings?code=JCSTPF_N_2025_000	TaylorandFrancisOnline_Global_TandFSTLibrary2025_2025-12-12
 THIEME:Book List - Text File	THIEME_GLOBAL_ALLEBOOKS	https://www.thieme-connect.com/products/ebooks/kbart/thiemeconnectcomebooks_AllTitles.txt	thiemeconnectcomebooks_AllTitles
 THIEME:Journals Listing - Text File	THIEME_GLOBAL_ALLJOURNALS	https://www.thieme-connect.com/products/ejournals/kbart/thiemeconnectcomejournals_AllTitles.txt	thiemeconnectcomejournals_AllTitles

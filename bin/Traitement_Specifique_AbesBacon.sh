@@ -131,23 +131,33 @@ function TS_03_RecuperationDuFichierKBART
 	fEchof
 	if [[ -s $RepOwnCloud"/"$fichier ]]
 	 then
-	  local LigneDEntete=$( head -n 1 $RepOwnCloud"/"$fichier  )
-	  LigneDEntete=${LigneDEntete//\"/}
-	  #fEchoVarf "LigneDEntete"
-	  local Separateur=${LigneDEntete/publication_title/}
-	  #fEchoVarf "Separateur"
-	  Separateur=${Separateur:0:1}
-	  fEchof "Separateur=${Separateur}="
+	  ##
+	  ## début mise en commentaire le 2025-08-04
+	  ##
+	  ##local LigneDEntete=$( head -n 1 $RepOwnCloud"/"$fichier  )
+	  ##LigneDEntete=${LigneDEntete,,}
+	  ##LigneDEntete=${LigneDEntete//\"/}
+	  ###fEchoVarf "LigneDEntete"
+	  ##local Separateur=${LigneDEntete/publication_title/}
+	  ###fEchoVarf "Separateur"
+	  ##Separateur=${Separateur:0:1}
+	  ##fEchof "Separateur=${Separateur}="
 
-	  if [[ $Separateur != $'\t' ]]
-	   then
-		  fEchof "Le séparateur est différent de la tabulation ==> il est remplacé par \t"
-		  # la commande columns crée des blancs entre la fin de donnée et la tabulation => il faut les supprimer
-	    column -t -s "$Separateur" -o $'\t' -x  $RepOwnCloud"/"$fichier | sed -e "s/ *\t/\t/g" > $V03_FichierKBART
-	   else
-	    fEchof "Le séparateur est la tabulation"
-	    cp  $RepOwnCloud"/"$fichier $V03_FichierKBART
-	  fi
+	  ##if [[ $Separateur != $'\t' ]]
+	  ## then
+		##  fEchof "Le séparateur est différent de la tabulation ==> il est remplacé par \t"
+		##  # la commande columns crée des blancs entre la fin de donnée et la tabulation => il faut les supprimer
+	  ##  column -t -s "$Separateur" -o $'\t' -x  $RepOwnCloud"/"$fichier | sed -e "s/ *\t/\t/g" > $V03_FichierKBART
+	  ## else
+	  ##  fEchof "Le séparateur est la tabulation"
+	  ##  cp  $RepOwnCloud"/"$fichier $V03_FichierKBART
+	  ##fi
+	  ##
+    ## fin mise en commentaire du 2025-08-04
+    ## code remplacé par :
+    cp  $RepOwnCloud"/"$fichier $V03_FichierKBART
+    ## car la gestion du BOM a été déportée dans Traitement_Commun.sh
+    ##
 
 	  # PAS SÛR : ahe 2024-06-24 : car les double-quotes sont remplacés avant la comparaison daff
 	  # À supprimer le 2024-06-30 si pas de pb
@@ -227,12 +237,15 @@ function TS_04_NormalisationDuNomDuFichierAuStandardBacon
 	fEchoVarf "NomFic2"
 	fEchoVarf "DateMajEditeur"
 	fEchoVarf "NomFic"
+	# passage systématique en majuscule : demande Delphine du 2025-07-02
+	# NomFic=${NomFic^^} à faire en test sur un seul fichier
   if [[ -z $DateMajEditeur ]]
    then
     V04_FichierKBART="${RUNDIR}/04/${NomFic}.${Extension}"
    else
     V04_FichierKBART="${RUNDIR}/04/${NomFic}_${DateMajEditeur}.${Extension}"
   fi
+
 
 }
 

@@ -1,30 +1,21 @@
 #!/bin/bash
 
-function BOM_String
+function BOM_File_EchoRC
 {
-	local string="$1"
-	#echo "in ${FUNCNAME[0]} : LANG=$LANG"
-	#[[ $LANG != "C" ]] && { echo "${FUNCNAME[0]} : This function is only valid for LANG=C" ; return 0 ;} # see comment#1
-	local LANG_ORIG="$LANG"
-  LANG="C" # see comment#1
-  BYTE1=${string:0:1}
-  BYTE2=${string:1:1}
-  BYTE23=${string:1:2}
-  LANG="$LANG_ORIG"
-	case $BYTE1 in
-		$'\xEF') [[ $BYTE23 == $'\xBB\xBF' ]] && return   8;;
-		$'\xFE') [[ $BYTE2  == $'\xFF' ]]     && return 161;;
-		$'\xFF') [[ $BYTE2  == $'\xFE' ]]     && return 162;;
-		*) return 1;;
-	esac
+  local rcBOM_String=$1
+  local fEcho=${2-echo}
+  BOM_String_EchoRC "$rcBOM_String" "$fEcho"
 
-	return 0
+  #echo "/usr/local/bin/uchardet "$File
+  #/usr/local/bin/uchardet "$File"
+  #file $File
+  return $rcBOM_String
 }
 
 function BOM_String_EchoRC
 {
-	local fEcho=${2-echo}
   local rcBOM_String=$1
+  local fEcho=${2-echo}
   $fEcho "rcBOM_String=$rcBOM_String"
   case $rcBOM_String in
 			0) $fEcho "function BOM_String should not return this way !!!";;
@@ -57,15 +48,25 @@ function BOM_File
   return $rcBOM_String
 }
 
-function BOM_File_EchoRC
+function BOM_String
 {
-  local rcBOM_String=$1
-  BOM_String_EchoRC "$rcBOM_String"
+	local string="$1"
+	#echo "in ${FUNCNAME[0]} : LANG=$LANG"
+	#[[ $LANG != "C" ]] && { echo "${FUNCNAME[0]} : This function is only valid for LANG=C" ; return 0 ;} # see comment#1
+	local LANG_ORIG="$LANG"
+  LANG="C" # see comment#1
+  BYTE1=${string:0:1}
+  BYTE2=${string:1:1}
+  BYTE23=${string:1:2}
+  LANG="$LANG_ORIG"
+	case $BYTE1 in
+		$'\xEF') [[ $BYTE23 == $'\xBB\xBF' ]] && return   8;;
+		$'\xFE') [[ $BYTE2  == $'\xFF' ]]     && return 161;;
+		$'\xFF') [[ $BYTE2  == $'\xFE' ]]     && return 162;;
+		*) return 1;;
+	esac
 
-  #echo "/usr/local/bin/uchardet "$File
-  #/usr/local/bin/uchardet "$File"
-  #file $File
-  return $rcBOM_String
+	return 0
 }
 
 function BOM_SystemEncoding

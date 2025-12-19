@@ -5,7 +5,8 @@
 ###############################################################
 #
 . $RACINE/bin/BOM.sh
-. $RACINE/bin/KBart_File_Header.sh
+#. $RACINE/bin/KBart_File_Header.sh
+. $RACINE/bin/KBart_File_Header_v2.sh ${BASECONF_SCRIPT}/KBart_Headers.conf
 #################################################################
 #
 #  FONCTIONS OUTILS
@@ -29,19 +30,24 @@ function TC_HtmlOutput
 function TC_BOM_HEADER_SEPARATOR
 {
 	FILE=$1
-  BOM_File "$FILE"
-	rc=$?
-	fEchoVarf "rc"
-	BOM_File_EchoRC "$rc" "fEchof"
-
 	# recherche du BOM
 	#
+	fEchof "TC_BOM_HEADER_SEPARATOR : appel de BOM_File $FILE"
+	fEchoVarf "LANG"
+  BOM_File "$FILE"
+	rcBOM_File=$?
+	fEchoVarf "rcBOM_File"
+	BOM_File_EchoRC "$rcBOM_File" "fEchof"
+
+	# recherche du Header
+	#
+	fEchoVarf "LANG"
 	local LANG_ORIG="$LANG"
   LANG="C" # see comment#1
   read -r TC_BHS_Header < "$FILE"
 
   #hexdump -C <<< $TC_BHS_Header
-  case $rc in
+  case $rcBOM_File in
 		  8) TC_BHS_Header=${TC_BHS_Header:3};;
 		161) TC_BHS_Header=${TC_BHS_Header:2};;
 		162) TC_BHS_Header=${TC_BHS_Header:2};;
@@ -50,41 +56,43 @@ function TC_BOM_HEADER_SEPARATOR
   # suppression du caractère \x0D = \r
   TC_BHS_Header=${TC_BHS_Header/$'\x0D'}
   LANG="$LANG_ORIG"
-
+  fEchoVarf "LANG"
   # KBFH_FindHeaderPatternApprox retourne :
   # ( numéro du pattern trouvé ou zéro sinon )*10
   # + 0 (Pattern inclus dans header )
   # + 1 ( Pattern = header )
 
-  KBFH_FindHeaderPatternApprox "$TC_BHS_Header"
-  rc=$?
-  rcPattern=$(( rc/10 ));rcExact=$(( rc%10 ))
+  KBFH_FindHeaderPatternApprox "$TC_BHS_Header" "fEchof"
+  local rc=$?
+  fEchoVarf "rc"
+  local rcPattern=$(( rc/10 ));fEchoVarf "rcPattern"
+  local rcExact=$(( rc%10 ))  ;fEchoVarf "rcExact"
   if [[ $rcPattern -eq 0 ]]
    then
     fEchof "Pattern not found for file header"
     TC_BHS_Header=${TC_BHS_Header//\"/}
-	  #fEchoVarf "TC_BHS_Header"
-	  TC_BHS_Separator=${TC_BHS_Header/publication_title/}
-	  # before going further we look after if publication_title is present in the header
+	  fEchoVarf "TC_BHS_Header"
+	  TC_BHS_Separator=${TC_BHS_Header#publication_title}
+	  # before going further we look after if publication_title is the first field in the header
 	  if [[ ${#TC_BHS_Separator} -eq ${#TC_BHS_Header} ]]
 	    then
-	      fEchoVarf "TC_BHS_Header"
+	      #fEchoVarf "TC_BHS_Header"
 	      fEchof "The file header don't even have publication_title as field !!!"
 	      return 255;
 	  fi
-	  #fEchoVarf "TC_BHS_Separator"
 	  TC_BHS_Separator=${TC_BHS_Separator:0:1}
-	  fEchoVarf "TC_BHS_Separator"
    else
     case $rcExact in
      0) fEchof "Pattern #$rcPattern : ${Versions[$rcPattern]} is a substring of file header";;
      1) fEchof "Pattern #$rcPattern : ${Versions[$rcPattern]} is exactly file header";;
+#     2) fEchof "Pattern #$rcPattern : ${Versions[$rcPattern]} is more than 99% close to file header";;
      *) fEchof "Pattern #$rcPattern : rcExact=$rcExact bad value; only 0 or 1 admitted."
     esac
 	  read version release separator quoted <<<${Versions[$rcPattern]//_/ }
 	  fEchoVarf "separator"
 	  TC_BHS_Separator=${Separators[$separator]}
   fi
+  fEchoVarf "TC_BHS_Separator"
   return $rcPattern;
 }
 #################################################################
@@ -151,8 +159,10 @@ function TC_03_Conformite_KBART
 	TC_EchoFunction
   local url=$1
 	fEchof "Recherche de l'encodage et du format du fichier kbart à traiter."
+	fEchof " --> TC_BOM_HEADER_SEPARATOR $V03_FichierKBART"
 	TC_BOM_HEADER_SEPARATOR "$V03_FichierKBART"
   local rcTC_BHS=$?
+  fEchoVarf "rcTC_BHS"
   if [[ ${rcTC_BHS} -eq 255 ]]
    then
     fLogMail
@@ -163,6 +173,7 @@ function TC_03_Conformite_KBART
     fLogMail
     return 255
   fi
+  fEchoVarf "TC_BHS_Separator"
 	if [[ $TC_BHS_Separator != $'\t' ]]
 	 then
 		fLogMail "Le séparateur ${TC_BHS_Separator} est différent de la tabulation: Pattern = ${Versions[$rcTC_BHS]} ."
@@ -172,6 +183,7 @@ function TC_03_Conformite_KBART
 		#fLogMail $( file ${V03_FichierKBART} )
 		fEchof "Création d'un fichier ${V03_FichierKBART}.non_conforme et transformation en fichier conforme."
 		mv ${V03_FichierKBART} ${V03_FichierKBART}".non_conforme"
+		# la commande columns crée des blancs entre la fin de donnée et la tabulation => il faut les supprimer
 		column -t -s "$TC_BHS_Separator" -o $'\t' -x ${V03_FichierKBART}".non_conforme" | sed -e "s/ *\t/\t/g" > ${V03_FichierKBART}
 	fi
 
@@ -410,6 +422,13 @@ function TC_07_Daff
   fEchoVarf "V07_FichierHtmlDaffSurServeurWeb"
 	cp ${V07_ResultatDaff_html_avecCaracteresSpeciaux} ${V07_FichierHtmlDaffSurServeurWeb}
 	[[ ! -s $V07_FichierHtmlDaffSurServeurWeb ]] && { fEchof "Fichier inexistant ou vide"; fEchoVarf "V07_FichierHtmlDaffSurServeurWeb"; return 1; }
+	# Copie du fichier html sur le répertoire HTTP
+  fEchof "Copie de"
+  fEchoVarf "V07_ResultatDaff_html_avecCaracteresSpeciaux"
+  fEchof "sous "
+  fEchoVarf "V07_FichierHtmlDaff_copieDansDiff"
+	cp ${V07_ResultatDaff_html_avecCaracteresSpeciaux} ${V07_FichierHtmlDaff_copieDansDiff}
+	[[ ! -s $V07_FichierHtmlDaff_copieDansDiff ]] && { fEchof "Fichier inexistant ou vide"; fEchoVarf "V07_FichierHtmlDaff_copieDansDiff"; return 1; }
   fEchof
 	return 0
 }
@@ -437,6 +456,11 @@ function TC_08_ArchivageFichierEnCours
 	fEchof "Maj de la date de téléchargement du fichier dans le fichier $V05_FichierHistoriqueDesTraitements"
 	echo "${DateMajEditeur}:${NomFic}_${V05_DateDernierTraitement}_${DateMajEditeur}.html"  >> $V05_FichierHistoriqueDesTraitements
   fEchof
+  fEchof "Suppression des versions antérieures du fichier ${V04_FichierKBART}"
+  fEchof " 1 - liste"
+  ls -al $V08_SuppressionVersionsAnterieures_FichierKBART # <nom du fichier sans date>*.tsv
+  fEchof " 2 - suppression"
+  rm -f $V08_SuppressionVersionsAnterieures_FichierKBART # <nom du fichier sans date>*.tsv
 	# copie du fichier dans le répertoire de référence ( derniere version du KBART ) et renommage du fichier aux standards BACON
 	fEchof "copie de V04_FichierKBART"
 	fEchof "      ${V04_FichierKBART}"
@@ -676,6 +700,6 @@ function TC_15_EnvoiMailRecapitulatif
 function TC_16_GestionRUNDIR
 {
   TC_EchoFunction
-  find ${BASERUNDIR_SCRIPT_EDITEUR} -type d -mtime +3 -exec echo "Suppression du dossier d'exécution : "{} \;
-	find ${BASERUNDIR_SCRIPT_EDITEUR} -type d -mtime +3 -exec rm -rf {} \;
+  find ${BASERUNDIR_SCRIPT_EDITEUR} -type d -mtime +6 -exec echo "Suppression du dossier d'exécution : "{} \;
+	find ${BASERUNDIR_SCRIPT_EDITEUR} -type d -mtime +6 -exec rm -rf {} \;
 }

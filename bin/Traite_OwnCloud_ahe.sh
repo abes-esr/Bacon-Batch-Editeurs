@@ -401,6 +401,6 @@ done < $V06_Dossiers_Archive
 
 # Suppression des fichiers temporaires
 #
-find ${BASERUNDIR_SCRIPT_EDITEUR} -type d -mtime +3 -exec echo "Suppression du dossier : "{} \;
-find ${BASERUNDIR_SCRIPT_EDITEUR} -type d -mtime +3 -exec rm -rf {} \;
+find ${BASERUNDIR_SCRIPT_EDITEUR} -type d -mtime +31 -exec echo "Suppression du dossier : "{} \;
+find ${BASERUNDIR_SCRIPT_EDITEUR} -type d -mtime +31 -exec rm -rf {} \;
 
